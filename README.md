@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-  <b>BizOps Data Analyst @ Toomics Global</b><br>
+  <b>Global Platform Operations Team Lead @ Toomics Global</b><br>
   <i>Turning messy CS data into actionable insights</i>
 </p>
 
@@ -18,7 +18,7 @@
 
 ### About Me
 
-- Currently working as a **Business Operations** team member at **Toomics Global**
+- Currently working as **Global Platform Operations Team Lead** at **Toomics Global**
 - Building **CS data analysis automation pipelines** with Python
 - Analyzing customer service data across **10 global markets** (EN/FR/ES/PT/DE/TH/JP/CN/IT/KR)
 - Interested in **data-driven process improvement** and **operational efficiency**
