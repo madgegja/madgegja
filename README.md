@@ -35,6 +35,8 @@
       <a href="https://github.com/madgegja/toomics-ai-agent">
         <img src="https://img.shields.io/badge/🤖_Project-toomics--ai--agent-7C3AED?style=for-the-badge&logo=anthropic&logoColor=white" />
       </a>
+      <br>
+      <img src="https://img.shields.io/badge/🔒_Private_Repository-gray?style=flat-square" />
       <br><br>
       <b>AI Agent — BizOps PM Assistant</b>
       <br><br>
@@ -46,6 +48,8 @@
       <a href="https://github.com/madgegja/bizops-CS-Study">
         <img src="https://img.shields.io/badge/📊_Project-bizops--CS--Study-blue?style=for-the-badge&logo=python&logoColor=white" />
       </a>
+      <br>
+      <img src="https://img.shields.io/badge/🔒_Private_Repository-gray?style=flat-square" />
       <br><br>
       <b>BizOps CS Analysis & Reporting System</b>
       <br><br>
