@@ -121,6 +121,16 @@ Clean Data (3,227)
 
 ---
 
+### GitHub Stats
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=madgegja&theme=tokyonight&hide_border=true" width="60%" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=madgegja&theme=tokyonight" width="97%" />
+</p>
+
 ---
 
 <p align="center">
