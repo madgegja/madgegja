@@ -21,6 +21,7 @@
 - Currently working as **Global Platform Operations Team Lead** at **Toomics Global**
 - 12 years of experience in **IT Platform Operations** — Payment, CS, Chargeback, IP Management
 - Building **AI Agent systems** to automate BizOps analysis & reporting
+- Building **AI-powered CS Chatbot** — real-time customer support across 10 markets
 - Building **CS data analysis automation pipelines** with Python
 - Analyzing operational data across **10 global markets** (EN/FR/ES/PT/DE/TH/JP/CN/IT/KR)
 - Interested in **AI-powered operations**, **data-driven process improvement**, and **operational efficiency**
@@ -31,7 +32,20 @@
 
 <table>
   <tr>
-    <td align="center" width="50%">
+    <td align="center" width="33%">
+      <a href="https://github.com/madgegja/Ai-Chat-bot-project">
+        <img src="https://img.shields.io/badge/💬_Project-Ai--Chat--bot-10B981?style=for-the-badge&logo=anthropic&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/🔒_Private_Repository-gray?style=flat-square" />
+      <br><br>
+      <b>Toomics CS AI Chatbot</b>
+      <br><br>
+      Claude API + FastAPI + RAG 기반 CS 챗봇<br>
+      11,621건 실데이터 분석 → 38% 셀프서비스 자동화<br>
+      10개 마켓 · 10개 언어 · Fraud 탐지 · 스마트 에스컬레이션
+    </td>
+    <td align="center" width="33%">
       <a href="https://github.com/madgegja/toomics-ai-agent">
         <img src="https://img.shields.io/badge/🤖_Project-toomics--ai--agent-7C3AED?style=for-the-badge&logo=anthropic&logoColor=white" />
       </a>
@@ -44,7 +58,7 @@
       결제 · CS · 차지백 · IP · 플랫폼 데이터 분석 자동화<br>
       12년차 PM 페르소나로 보고서 생성 & 운영 인사이트 도출
     </td>
-    <td align="center" width="50%">
+    <td align="center" width="33%">
       <a href="https://github.com/madgegja/bizops-CS-Study">
         <img src="https://img.shields.io/badge/📊_Project-bizops--CS--Study-blue?style=for-the-badge&logo=python&logoColor=white" />
       </a>
@@ -58,6 +72,38 @@
     </td>
   </tr>
 </table>
+
+---
+
+### 💬 CS AI Chatbot Project Highlights
+
+```
+Customer Message
+    │
+    ▼
+[1] Language Detection (10 languages)
+    │
+    ▼
+[2] Fraud Detection ──┬── Intent Classification
+    (parallel)         │   (7 categories × 23 sub-intents)
+    │                  │
+    ▼                  ▼
+[3] Routing Decision
+    ├── L1 → Immediate Escalation (Fraud/Critical)
+    ├── L2 → AI Draft + Agent Review (Ticket)
+    └── L3 → Self-Service Auto Response (38%)
+```
+
+**핵심 기능**: 🎯 의도 분류 · ⚡ 셀프서비스 자동 처리 · 👥 스마트 에스컬레이션 · 🛡️ Fraud 탐지 · 🌍 다국어 지원
+
+**기술 스택**: FastAPI · Claude API · ChromaDB (RAG) · Docker · Nginx · Pydantic v2
+
+**주요 성과**:
+- 11,621건 실제 CS 데이터 기반 — 7개월 × 10개 마켓 분석
+- 월 ~630건(38%) 셀프서비스 자동 처리 목표
+- 90/10 하이브리드 응답: 90% 매뉴얼 템플릿 + 10% AI 자연어 글루
+- 9개 Red Flag 지표 실시간 Fraud 스코어링 (0~100)
+- Production 서버 배포 완료 (Docker + systemd)
 
 ---
 
@@ -112,6 +158,9 @@ Clean Data (3,227)
   <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white" />
   <img src="https://img.shields.io/badge/Claude_AI-D4A574?style=for-the-badge&logo=anthropic&logoColor=white" />
   <img src="https://img.shields.io/badge/Claude_Code-191919?style=for-the-badge&logo=anthropic&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/ChromaDB-FF6F00?style=for-the-badge&logo=databricks&logoColor=white" />
   <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" />
   <img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
