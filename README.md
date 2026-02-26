@@ -47,7 +47,7 @@
 
 <table>
   <tr>
-    <td align="center" width="33%">
+    <td align="center" width="50%">
       <a href="https://github.com/madgegja/Ai-Chat-bot-project">
         <img src="https://img.shields.io/badge/💬_Project-Ai--Chat--bot-10B981?style=for-the-badge&logo=anthropic&logoColor=white" />
       </a>
@@ -60,7 +60,7 @@
       11,621건 실데이터 분석 → 38% 셀프서비스 자동화<br>
       10개 마켓 · 10개 언어 · Fraud 탐지 · 스마트 에스컬레이션
     </td>
-    <td align="center" width="33%">
+    <td align="center" width="50%">
       <a href="https://github.com/madgegja/toomics-ai-agent">
         <img src="https://img.shields.io/badge/🤖_Project-toomics--ai--agent-7C3AED?style=for-the-badge&logo=anthropic&logoColor=white" />
       </a>
@@ -73,7 +73,9 @@
       결제 · CS · 차지백 · IP · 플랫폼 데이터 분석 자동화<br>
       12년차 PM 페르소나로 보고서 생성 & 운영 인사이트 도출
     </td>
-    <td align="center" width="33%">
+  </tr>
+  <tr>
+    <td align="center" width="50%">
       <a href="https://github.com/madgegja/bizops-CS-Study">
         <img src="https://img.shields.io/badge/📊_Project-bizops--CS--Study-blue?style=for-the-badge&logo=python&logoColor=white" />
       </a>
@@ -85,9 +87,7 @@
       Zendesk ticket data analysis automation pipeline<br>
       Raw 12,920 tickets → Clean 3,227 tickets → Reports & Charts
     </td>
-  </tr>
-  <tr>
-    <td align="center" colspan="3">
+    <td align="center" width="50%">
       <a href="https://madgegja.github.io/Project-Artifacts-Portal/">
         <img src="https://img.shields.io/badge/🗂️_Portfolio-Project--Artifacts--Portal-0EA5E9?style=for-the-badge&logo=githubpages&logoColor=white" />
       </a>
