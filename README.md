@@ -125,14 +125,14 @@ Customer Message
 
 **핵심 기능**: 🎯 의도 분류 · ⚡ 셀프서비스 자동 처리 · 👥 스마트 에스컬레이션 · 🛡️ Fraud 탐지 · 🌍 다국어 지원
 
-**기술 스택**: FastAPI · Claude API · ChromaDB (RAG) · Docker · Nginx · Pydantic v2
+**기술 스택**: FastAPI · Claude API · ChromaDB (RAG) · Nginx · Pydantic v2
 
 **주요 성과**:
 - 11,621건 실제 CS 데이터 기반 — 7개월 × 10개 마켓 분석
 - 월 ~630건(38%) 셀프서비스 자동 처리 목표
 - 90/10 하이브리드 응답: 90% 매뉴얼 템플릿 + 10% AI 자연어 글루
 - 9개 Red Flag 지표 실시간 Fraud 스코어링 (0~100)
-- Production 서버 배포 완료 (Docker + systemd)
+- Production 서버 배포 완료 (systemd + Nginx)
 
 ---
 
@@ -155,27 +155,31 @@ Customer Message
 - 차지백 리스크 모니터링 & 사전 경고
 - 이해관계자별 맞춤 커뮤니케이션 (경영진/개발팀/CS팀/파트너)
 
+**기술 스택**: Claude Code · Python · Confluence API · Google Sheets · Zendesk API
+
 ---
 
 ### 📊 CS Analysis Project Highlights
 
-**Key Features:**
-- 3-layer data filtering (auto-reply / spam / merge)
-- 4-priority category classification engine
-- Auto-generated weekly reports (4 types) + charts
-- Monthly VOC analysis with Excel dashboards
-- Multi-language CS analysis (10 markets)
+**핵심 기능**:
+- 3단계 데이터 필터링 (자동응답 / 스팸 / 병합 처리)
+- 4단계 우선순위 카테고리 분류 엔진
+- 주간 리포트 자동 생성 (4종) + 차트
+- 월간 VOC 분석 + Excel 대시보드
+- 10개 마켓 다국어 CS 데이터 분석
 
 ```
-Zendesk Raw JSON (12,920)
+Zendesk Raw JSON (12,920건)
        │
-       ▼  3-Layer Filtering (-9,693)
-Clean Data (3,227)
+       ▼  3단계 필터링 (-9,693건)
+정제 데이터 (3,227건)
        │
-       ├──▶ Weekly Reports (4 types + charts)
-       ├──▶ Monthly CSV / Excel (per market tabs)
-       └──▶ VOC Analysis Reports (Excel + Markdown)
+       ├──▶ 주간 리포트 (4종 + 차트)
+       ├──▶ 월간 CSV / Excel (마켓별 탭)
+       └──▶ VOC 분석 리포트 (Excel + Markdown)
 ```
+
+**기술 스택**: Python · Pandas · Zendesk API · Excel · Matplotlib
 
 ---
 
