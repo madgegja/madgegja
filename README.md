@@ -28,6 +28,21 @@
 
 ---
 
+### 🌐 BizOps Artifacts Portal
+
+<p align="center">
+  <a href="https://madgegja.github.io/Project-Artifacts-Portal/" target="_blank">
+    <img src="https://img.shields.io/badge/🗂️_BizOps_Artifacts_Portal-Live-0EA5E9?style=for-the-badge&logo=githubpages&logoColor=white" />
+  </a>
+</p>
+
+<p align="center">
+  <b>Toomics Global BizOps 산출물 포털</b> — CS 운영 매뉴얼 · 차지백 소명 템플릿 · 분석 리포트 · AI 챗봇 기획 문서 · 주간 보고서 아카이브<br>
+  <i>29개 문서 · 10개 글로벌 마켓 · Claude AI 기반 자동화 시스템 산출물</i>
+</p>
+
+---
+
 ### What I'm Working On
 
 <table>
@@ -69,6 +84,20 @@
       <br><br>
       Zendesk ticket data analysis automation pipeline<br>
       Raw 12,920 tickets → Clean 3,227 tickets → Reports & Charts
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="3">
+      <a href="https://madgegja.github.io/Project-Artifacts-Portal/">
+        <img src="https://img.shields.io/badge/🗂️_Portfolio-Project--Artifacts--Portal-0EA5E9?style=for-the-badge&logo=githubpages&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/🌐_Public_Portfolio-live-0EA5E9?style=flat-square" />
+      <br><br>
+      <b>BizOps Artifacts Portal</b>
+      <br><br>
+      CS 운영 매뉴얼(EN/KO) · 차지백 소명 템플릿 · AI 챗봇 기획 문서 · 분석 리포트 · 주간 보고서 아카이브<br>
+      29개 문서 공개 포털 — Claude AI 기반 BizOps 자동화 산출물
     </td>
   </tr>
 </table>
