@@ -28,21 +28,6 @@
 
 ---
 
-### 🌐 BizOps Artifacts Portal
-
-<p align="center">
-  <a href="https://madgegja.github.io/Project-Artifacts-Portal/" target="_blank">
-    <img src="https://img.shields.io/badge/🗂️_BizOps_Artifacts_Portal-Live-0EA5E9?style=for-the-badge&logo=githubpages&logoColor=white" />
-  </a>
-</p>
-
-<p align="center">
-  <b>Toomics Global BizOps 산출물 포털</b> — CS 운영 매뉴얼 · 차지백 소명 템플릿 · 분석 리포트 · AI 챗봇 기획 문서 · 주간 보고서 아카이브<br>
-  <i>29개 문서 · 10개 글로벌 마켓 · Claude AI 기반 자동화 시스템 산출물</i>
-</p>
-
----
-
 ### What I'm Working On
 
 <table>
@@ -101,6 +86,21 @@
     </td>
   </tr>
 </table>
+
+---
+
+### 🌐 BizOps Artifacts Portal
+
+<p align="center">
+  <a href="https://madgegja.github.io/Project-Artifacts-Portal/" target="_blank">
+    <img src="https://img.shields.io/badge/🗂️_BizOps_Artifacts_Portal-Live-0EA5E9?style=for-the-badge&logo=githubpages&logoColor=white" />
+  </a>
+</p>
+
+<p align="center">
+  <b>Toomics Global BizOps 산출물 포털</b> — CS 운영 매뉴얼 · 차지백 소명 템플릿 · 분석 리포트 · AI 챗봇 기획 문서 · 주간 보고서 아카이브<br>
+  <i>29개 문서 · 10개 글로벌 마켓 · Claude AI 기반 자동화 시스템 산출물</i>
+</p>
 
 ---
 
