@@ -203,14 +203,6 @@ Zendesk Raw JSON (12,920건)
 
 ---
 
-### GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=madgegja&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="60%" />
-</p>
-
----
-
 <p align="center">
   <i>"Data doesn't lie. It just needs someone to ask the right questions — or an AI Agent to find them."</i>
 </p>
