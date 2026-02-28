@@ -104,10 +104,14 @@
 
 ---
 
-### 💬 CS AI Chatbot Project Highlights
+<!-- CS-BOT-START -->
+### 💬 CS AI Chatbot Project Highlights — Phase 4 진행중 (2/4)
 
 ```
 Customer Message
+    │
+    ▼
+[0.5] Third-Party Block (Minna/Ethoca → DO NOT RESPOND)
     │
     ▼
 [1] Language Detection (10 languages)
@@ -121,18 +125,27 @@ Customer Message
     ├── L1 → Immediate Escalation (Fraud/Critical)
     ├── L2 → AI Draft + Agent Review (Ticket)
     └── L3 → Self-Service Auto Response (38%)
+    │
+    ▼
+[4] Output Validation (quality score 0.0~1.0)
 ```
 
-**핵심 기능**: 🎯 의도 분류 · ⚡ 셀프서비스 자동 처리 · 👥 스마트 에스컬레이션 · 🛡️ Fraud 탐지 · 🌍 다국어 지원
+**핵심 기능**: 🎯 의도 분류 · ⚡ 셀프서비스 자동 처리 · 👥 스마트 에스컬레이션 · 🛡️ Fraud 탐지 · 🌍 다국어 지원 · 🚫 제3자 해지 차단 · 📊 응답 품질 평가
 
-**기술 스택**: FastAPI · Claude API · ChromaDB (RAG) · Nginx · Pydantic v2
+**기술 스택**: FastAPI · Claude API · ChromaDB (RAG) · Nginx · Pydantic v2 · Docker · GitHub Actions (CI/CD)
 
 **주요 성과**:
 - 11,621건 실제 CS 데이터 기반 — 7개월 × 10개 마켓 분석
 - 월 ~630건(38%) 셀프서비스 자동 처리 목표
 - 90/10 하이브리드 응답: 90% 매뉴얼 템플릿 + 10% AI 자연어 글루
-- 9개 Red Flag 지표 실시간 Fraud 스코어링 (0~100)
-- Production 서버 배포 완료 (systemd + Nginx)
+- 9개 Red Flag 지표 실시간 Fraud 스코어링 (0~100) + 경계값 강화 (49/50, HIGH risk 클램핑)
+- Minna Technologies / Ethoca 제3자 해지 요청 자동 차단 (Step 0.5)
+- 다국어 템플릿 30개 — 3개 카테고리 × 10개 마켓
+- 테스트 161개 (5개 파일) — 단위/통합 테스트
+- 응답 품질 평가 시스템 — template_match / completeness / safety / length → 0.0~1.0
+- 피드백 분석 API 확장 — 범위 조회 + 카테고리별 분석 (`/metrics/range`, `/breakdown`)
+- CI/CD 완성 — test coverage + Docker push (GHCR) + deploy-staging
+<!-- CS-BOT-END -->
 
 ---
 
