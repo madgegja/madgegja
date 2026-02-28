@@ -73,7 +73,7 @@
       Raw 12,920 tickets → Clean 3,227 tickets → Reports & Charts
     </td>
     <td align="center" width="50%">
-      <a href="https://madgegja.github.io/Project-Artifacts-Portal/">
+      <a href="https://tg-bizops.github.io/BizOPS/">
         <img src="https://img.shields.io/badge/🗂️_Portfolio-Project--Artifacts--Portal-0EA5E9?style=for-the-badge&logo=githubpages&logoColor=white" />
       </a>
       <br>
@@ -92,7 +92,7 @@
 ### 🌐 BizOps Artifacts Portal
 
 <p align="center">
-  <a href="https://madgegja.github.io/Project-Artifacts-Portal/" target="_blank">
+  <a href="https://tg-bizops.github.io/BizOPS/" target="_blank">
     <img src="https://img.shields.io/badge/🗂️_BizOps_Artifacts_Portal-Live-0EA5E9?style=for-the-badge&logo=githubpages&logoColor=white" />
   </a>
 </p>
