@@ -124,7 +124,7 @@ tg-bizops.github.io/BizOPS/
 ---
 
 <!-- CS-BOT-START -->
-### 💬 CS AI Chatbot Project Highlights — Phase 4 진행중 (2/4)
+### 💬 CS AI Chatbot Project Highlights — Phase 4 진행중 (3/4)
 
 ```
 Customer Message
@@ -137,7 +137,7 @@ Customer Message
     │
     ▼
 [2] Fraud Detection ──┬── Intent Classification
-    (parallel)         │   (7 categories × 23 sub-intents)
+    (parallel)         │   (7 categories × 32 sub-intents)
     │                  │
     ▼                  ▼
 [3] Routing Decision
@@ -164,6 +164,7 @@ Customer Message
 - 응답 품질 평가 시스템 — template_match / completeness / safety / length → 0.0~1.0
 - 피드백 분석 API 확장 — 범위 조회 + 카테고리별 분석 (`/metrics/range`, `/breakdown`)
 - CI/CD 완성 — test coverage + Docker push (GHCR) + deploy-staging
+- 에이전트 문서 최적화 — per-turn 1,195줄→430줄 (-64%), SSOT 패턴 적용, 정합성 13건 수정
 <!-- CS-BOT-END -->
 
 ---
