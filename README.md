@@ -171,23 +171,33 @@ Customer Message
 ### 🤖 AI Agent Project Highlights
 
 ```
-.agent/
-├── AGENT.md     ← 12년차 PM/PO 페르소나 & 행동 규칙
-└── SKILLS.md    ← 6개 도메인 분석 스킬 정의
+┌───────────────────────────────────────────────────┐
+│  Main (Opus) — Orchestrator                       │
+│  의사결정 · 분석 · 보고서 · 응대 생성 · 스크립트 실행  │
+└──┬──────┬──────┬──────┬──────┬──────┬──────┬──────┘
+   │      │      │      │      │      │      │
+ ┌─▼──┐┌──▼──┐┌──▼──┐┌──▼──┐┌──▼──┐┌──▼──┐┌──▼───┐
+ │cs- ││week-││ip-  ││ip-  ││pg-  ││code-││bizops│ Sonnet ×7
+ │anal.││coll.││scan.││rep. ││anal.││expl.││-rev. │
+ └────┘└─────┘└─────┘└─────┘└─────┘└─────┘└──────┘
 
-데이터 주입 → 자동 분류 → 분석 → 보고서 생성 → 개선 제안
+Data Ingest → 자동 분류 → 9단계 필터링(82% 노이즈 제거)
+→ 4단계 카테고리 분류 → 분석 → 보고서 생성 → 배포(Pages/Confluence)
 ```
 
-**지원 데이터**: 💳 결제(Payment) · 🔄 차지백(Chargeback) · 📞 CS · 🛡️ IP 보호 · 📈 플랫폼 KPI · 💰 정산
+**핵심 기능**: 📞 CS 분석 · 💳 차지백 소명 · 🛡️ Fraud 탐지 · 🔒 IP 보호(DMCA) · 📊 보고서 자동 생성 · 🌍 10개 마켓 대응
 
-**주요 기능**:
-- 데이터 자동 분류 및 품질 검증
-- WoW / MoM / YoY 비교 분석
-- 일일 · 주간 · 월간 · 분기 보고서 자동 생성
-- 차지백 리스크 모니터링 & 사전 경고
-- 이해관계자별 맞춤 커뮤니케이션 (경영진/개발팀/CS팀/파트너)
+**기술 스택**: Claude Code (Opus + Sonnet ×7) · Python · pandas · Confluence API · Google Sheets API · Zendesk API
 
-**기술 스택**: Claude Code · Python · Confluence API · Google Sheets · Zendesk API
+**주요 성과**:
+- 메인(Opus) + 서브(Sonnet) 7개 멀티 에이전트 오케스트레이션 — 병렬/순차 자동 판단
+- 12년차 PM/PO 페르소나 — 실무 중심 분석 · 데이터 드리븐 판단 · 이해관계자별 맞춤 커뮤니케이션
+- CS 데이터 9단계 필터링 파이프라인 — 10,000+ 티켓에서 82% 노이즈 제거 → 45컬럼 정제 출력
+- 13,896건+ CS 데이터 × 10개월 × 11개 언어 분석 — 4단계 카테고리 + 3단계 마켓 자동 분류
+- 차지백 Google Sheet 실시간 동기화 — 9개 PG사 · 30컬럼 · 소명 문서 자동 생성
+- Fraud Red Flag 9개 지표 탐지 → 악의성 판정 → 영문 CS 응대 7섹션 템플릿 자동 작성
+- 일일 · 주간 · 월간 · 분기 보고서 자동 생성 (HTML/Confluence/XLSX) + WoW/MoM/YoY 비교
+- 29개 운영 산출물 단독 기획·작성 → GitHub Pages + Confluence 13페이지 배포
 
 ---
 
