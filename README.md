@@ -21,7 +21,7 @@
 - Currently working as **Global Platform Operations Team Lead** at **Toomics Global**
 - 12 years of experience in **IT Platform Operations** — Payment, CS, Chargeback, IP Management
 - Building **AI Agent systems** to automate BizOps analysis & reporting
-- Building **AI-powered CS Chatbot** — real-time customer support across 10 markets
+- Building **CS AI Dashboard** — real-time ticket management with AI Draft engine
 - Building **CS data analysis automation pipelines** with Python
 - Analyzing operational data across **10 global markets** (EN/FR/ES/PT/DE/TH/JP/CN/IT/KR)
 - Interested in **AI-powered operations**, **data-driven process improvement**, and **operational efficiency**
@@ -32,19 +32,6 @@
 
 <table>
   <tr>
-    <td align="center" width="50%">
-      <a href="https://github.com/madgegja/Ai-Chat-bot-project">
-        <img src="https://img.shields.io/badge/💬_Project-Ai--Chat--bot-10B981?style=for-the-badge&logo=anthropic&logoColor=white" />
-      </a>
-      <br>
-      <img src="https://img.shields.io/badge/🔒_Private_Repository-gray?style=flat-square" />
-      <br><br>
-      <b>Toomics CS AI Chatbot</b>
-      <br><br>
-      Claude API + FastAPI + RAG 기반 CS 챗봇<br>
-      11,621건 실데이터 분석 → 38% 셀프서비스 자동화<br>
-      10개 마켓 · 10개 언어 · Fraud 탐지 · 스마트 에스컬레이션
-    </td>
     <td align="center" width="50%">
       <a href="https://github.com/madgegja/toomics-ai-agent">
         <img src="https://img.shields.io/badge/🤖_Project-toomics--ai--agent-7C3AED?style=for-the-badge&logo=anthropic&logoColor=white" />
@@ -57,6 +44,19 @@
       Claude Code 기반 AI 에이전트 시스템<br>
       결제 · CS · 차지백 · IP · 플랫폼 데이터 분석 자동화<br>
       12년차 PM 페르소나로 보고서 생성 & 운영 인사이트 도출
+    </td>
+    <td align="center" width="50%">
+      <a href="https://cs-dashboard.duckdns.org/">
+        <img src="https://img.shields.io/badge/🖥️_Project-CS--AI--Dashboard-6366F1?style=for-the-badge&logo=fastapi&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/🔒_Private_(toomics--ai--agent/dashboard)-gray?style=flat-square" />
+      <br><br>
+      <b>CS AI Dashboard</b>
+      <br><br>
+      FastAPI + Vanilla JS SPA · Zendesk 실시간 연동<br>
+      AI Draft 엔진 (RAG + Claude) · 스팸 P1~P11 · 품질 6차원<br>
+      10개 마켓 · 503 tests · Phase 1 운영 중
     </td>
   </tr>
   <tr>
@@ -74,15 +74,31 @@
     </td>
     <td align="center" width="50%">
       <a href="https://tg-bizops.github.io/BizOPS/">
-        <img src="https://img.shields.io/badge/🗂️_Portfolio-Project--Artifacts--Portal-0EA5E9?style=for-the-badge&logo=githubpages&logoColor=white" />
+        <img src="https://img.shields.io/badge/🗂️_Portfolio-BizOPS--Portal-0EA5E9?style=for-the-badge&logo=githubpages&logoColor=white" />
       </a>
       <br>
       <img src="https://img.shields.io/badge/🌐_Public_Portfolio-live-0EA5E9?style=flat-square" />
       <br><br>
       <b>BizOps Artifacts Portal</b>
       <br><br>
-      CS 운영 매뉴얼(EN/KO) · 차지백 소명 템플릿 · AI 챗봇 기획 문서 · 분석 리포트 · 주간 보고서 아카이브<br>
-      29개 문서 공개 포털 — Claude AI 기반 BizOps 자동화 산출물
+      CS 매뉴얼 · 차지백 소명 · AI 대시보드 문서 · FAQ 10개 언어 · 주간 리포트 아카이브<br>
+      61개 문서 · 9개 카테고리 — Data-Dense Dashboard 디자인
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/Ai-Chat-bot-project">
+        <img src="https://img.shields.io/badge/💬_Project-Ai--Chat--bot-10B981?style=for-the-badge&logo=anthropic&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/📦_Archived_(프로토타입_완료)-gray?style=flat-square" />
+      <br><br>
+      <b>Toomics CS AI Chatbot (Archived)</b>
+      <br><br>
+      Claude API + FastAPI + ChromaDB 기반 CS 챗봇 프로토타입<br>
+      → CS AI Dashboard로 통합 (Phase 1 운영 중)
+    </td>
+    <td align="center" width="50%">
     </td>
   </tr>
 </table>
@@ -94,77 +110,72 @@
 ```
 tg-bizops.github.io/BizOPS/
 ├── 📞 CS 운영 (10)                    ├── 💬 AI 챗봇 (13)
-│   ├─ 매뉴얼 EN/KO v2.1              │   ├─ 기획·개요 (5)
-│   ├─ 반복문의 대응 매뉴얼             │   │  비용 분석 · One Pager · 로드맵
-│   ├─ 분석·시각화 (3)                 │   │  아키텍처 설명서 · 운영 인포그래픽
-│   │  Fraud 리포트 · 인포그래픽        │   ├─ 운영·교육 (5)
-│   │  티켓 레벨 분석                   │   │  운영자 가이드 · 시연 시나리오
-│   ├─ 프로세스 플로우 (3)              │   │  운영 매뉴얼 · 교육 자료 · 테스트
-│   │  CS 플로우 · CB 플로우            │   └─ 플로우·에스컬레이션 (3)
-│   │  자동화 로드맵                    │      에스컬레이션 · 파이프라인 · 흐름도
-│   └─ 주간 리포트 아카이브             │
-├── 💳 차지백 (3)                      ├── 🛡️ IP 보호 (1)
-│   운영 매뉴얼 v1.3 · 소명 폼 V5      │   IP 보호 운영 매뉴얼
-│   증빙 템플릿 v2                     └── 📊 대시보드 (2)
-└── 29개 문서 · 5개 카테고리                Ticket Dashboard · 대시보드 매뉴얼
+│   ├─ 매뉴얼 EN/KO v2.8              │   ├─ 기획·개요 (5)
+│   ├─ Fraud 분석 · 인포그래픽          │   └─ 운영·교육 (8)
+│   ├─ 프로세스 플로우 · 로드맵         │
+│   └─ 주간 리포트 아카이브             ├── 🖥️ CS Dashboard (3)
+├── ❓ FAQ (10)                        │   매뉴얼 · 퀵스타트 · 로드맵
+│   10개 언어 FAQ 매뉴얼                │
+├── 💳 차지백 (4)                      ├── 🛡️ IP 보호 (1)
+│   운영 매뉴얼 v1.4 · 소명 폼 V5      │
+│   증빙 템플릿 · 플로우                ├── ⚖️ 정책/약관 (10)
+├── 📊 대시보드 (2)                    │   이용약관 10개 언어
+│   Ticket Dashboard · 매뉴얼          └── 📁 기타 (4)
+└── 61개 문서 · 9개 카테고리                포탈 매뉴얼 · 템플릿
 ```
 
-**핵심 기능**: 📄 이중 언어 매뉴얼(EN/KO) · 📊 데이터 기반 분석물 · 💳 차지백 소명 체계 · 💬 AI 챗봇 기획 풀세트 · 🖥️ 인터랙티브 대시보드 · 🛡️ IP 보호 프로세스
+**핵심 기능**: 📄 이중 언어 매뉴얼(EN/KO) · 📊 데이터 기반 분석물 · 💳 차지백 소명 체계 · 🖥️ CS AI Dashboard 문서 · 🌍 10개 언어 FAQ/약관
 
-**기술 스택**: GitHub Pages · HTML/CSS · Claude AI 자동 생성 · `@media print` PDF 변환 지원
+**기술 스택**: GitHub Pages · HTML/CSS · Fira Code/Sans 디자인 시스템 · Claude AI 자동 생성 · `@media print` PDF 변환
 
 **주요 성과**:
-- 29개 문서 단독 기획·작성 — 10개 글로벌 마켓 대응 운영 산출물
-- CS 운영 매뉴얼 EN/KO 동시 제공, 복사 즉시 사용 가능한 응대 템플릿 내장
-- 11,621건 × 7개월 실데이터 분석 → 인포그래픽 · Fraud 리포트 · 티켓 레벨 분석
-- 8개 PG사 차지백 소명 매뉴얼 + 증빙 폼 V5 + 증빙 템플릿 v2
-- AI 챗봇 기획 풀세트 — 아키텍처 → 로드맵 → 시연 시나리오 → 교육 자료 → 운영 매뉴얼 (13종)
-- CS Ticket Dashboard + 운영 매뉴얼 (실시간 시각화)
+- 61개 문서 단독 기획·작성 — 10개 글로벌 마켓 대응 운영 산출물
+- CS 매뉴얼 EN/KO v2.8 — 13,405건 데이터 실증 분석 기반, 복사 즉시 사용 템플릿
+- CS AI Dashboard — Zendesk 실시간 연동, AI Draft 엔진, 503 tests
+- 8개 PG사 차지백 소명 매뉴얼 + 증빙 폼 V5 + 증빙 템플릿
+- FAQ 10개 언어 + 이용약관 10개 언어 — Zendesk 원본 동기화
+- Data-Dense Dashboard 디자인 시스템 — Fira Code/Sans, CSS 변수 팔레트
 
 ---
 
-<!-- CS-BOT-START -->
-### 💬 CS AI Chatbot Project Highlights — Phase 4 진행중 (6/7)
+### 🖥️ CS AI Dashboard Highlights — Phase 1 운영 중
 
 ```
-Customer Message
+Zendesk Ticket
     │
     ▼
-[0.5] Third-Party Block (Minna/Ethoca → DO NOT RESPOND)
+[1] 4-Stage 카테고리 분류 (Intent → Content → Consensus → Post-correction)
     │
     ▼
-[1] Language Detection (10 languages)
+[2] 언어 자동 감지 (10개 언어) + Zendesk 태그 교정
     │
     ▼
-[2] Fraud Detection ──┬── Intent Classification
-    (parallel)         │   (7 categories × 23 sub-intents)
-    │                  │
-    ▼                  ▼
-[3] Routing Decision
-    ├── L1 → Immediate Escalation (Fraud/Critical)
-    ├── L2 → AI Draft + Agent Review (Ticket)
-    └── L3 → Self-Service Auto Response (38%)
+[3] 스팸 탐지 P1~P11 ──┬── 운영자 확인 V1~V4
+    (병렬)               │   (이중결제 · 계정정지 · 작품삭제 · VIP)
+    │                    │
+    ▼                    ▼
+[4] RAG 매뉴얼 매칭 (9 카테고리 × 10 언어)
     │
     ▼
-[4] Output Validation (quality score 0.0~1.0)
+[5] Claude AI Draft 생성 (95/5 규칙: 95% 소스 기반)
+    │
+    ▼
+[6] 품질 점수 6차원 평가 → 상담원 확인 → Zendesk 발송
 ```
 
-**핵심 기능**: 🎯 의도 분류 · ⚡ 셀프서비스 자동 처리 · 👥 스마트 에스컬레이션 · 🛡️ Fraud 탐지 · 🌍 다국어 지원 · 🚫 제3자 해지 차단 · 📊 응답 품질 평가
+**핵심 기능**: 🎯 AI Draft 생성 · 📊 실시간 KPI · 🔍 차트 클릭 필터 · 👤 고객 프로필 모달 · 🚫 스팸 P1~P11 · ✅ 운영자 확인 V1~V4 · 📈 품질 6차원 평가 · 🔄 30초 자동 새로고침
 
-**기술 스택**: FastAPI · Claude API · ChromaDB (RAG) · Nginx · Pydantic v2 · Docker · GitHub Actions (CI/CD)
+**기술 스택**: FastAPI · Vanilla JS SPA · Zendesk REST API · Claude API (SDK + Proxy) · RAG (섹션 기반, 벡터DB 불필요) · Pydantic v2 · pytest (503건)
 
 **주요 성과**:
-- 11,621건 실제 CS 데이터 기반 — 7개월 × 10개 마켓 분석
-- 월 ~630건(38%) 셀프서비스 자동 처리 목표
-- 90/10 하이브리드 응답: 90% 매뉴얼 템플릿 + 10% AI 자연어 글루
-- 9개 Red Flag 지표 실시간 Fraud 스코어링 (0~100) + 경계값 강화 (49/50, HIGH risk 클램핑)
-- Minna Technologies / Ethoca 제3자 해지 요청 자동 차단 (Step 0.5)
-- 다국어 템플릿 30개 — 3개 카테고리 × 10개 마켓
-- 테스트 249개 (9개 파일) — 단위/통합 테스트
-- 응답 품질 평가 시스템 — template_match / completeness / safety / length → 0.0~1.0
-- 피드백 분석 API 확장 — 범위 조회 + 카테고리별 분석 (`/metrics/range`, `/breakdown`)
-- CI/CD 완성 — test coverage + Docker push (GHCR) + deploy-staging
-<!-- CS-BOT-END -->
+- Zendesk 실시간 연동 — 티켓 조회/답변/에스컬레이션/내부메모 전체 액션
+- 4-Stage 카테고리 분류 파이프라인 — 24개 intent + 9개 카테고리 × 10개 언어 키워드
+- 다국어 RAG 지식베이스 — 9개 언어 (EN + FR/DE/ES/JP/PT/TH/CN/IT)
+- 스팸 감지 P1~P11 — 법률사칭, 소셜미디어, 보안사칭, 영업스팸 등 11개 패턴
+- 품질 점수 6차원 차등 가중치 (template 0.25 / safety 0.20 / actionability 0.20)
+- 고객 프로필 모달 — Zendesk user_fields 매핑 (회원번호, 아이디, VIP, 어드민 링크)
+- 503 tests 전체 통과 (API 21 + 스팸 35 + 검증 41 + 다국어 RAG 17 + 품질 32 + 기타)
+- Phase 1(수동확인) 운영 중 → Phase 2(L3 자동) → Phase 3(확대 자동화) 로드맵
 
 ---
 
@@ -191,13 +202,12 @@ Data Ingest → 자동 분류 → 9단계 필터링(82% 노이즈 제거)
 
 **주요 성과**:
 - 메인(Opus) + 서브(Sonnet) 7개 멀티 에이전트 오케스트레이션 — 병렬/순차 자동 판단
-- 12년차 PM/PO 페르소나 — 실무 중심 분석 · 데이터 드리븐 판단 · 이해관계자별 맞춤 커뮤니케이션
-- CS 데이터 9단계 필터링 파이프라인 — 10,000+ 티켓에서 82% 노이즈 제거 → 45컬럼 정제 출력
-- 13,896건+ CS 데이터 × 10개월 × 11개 언어 분석 — 4단계 카테고리 + 3단계 마켓 자동 분류
-- 차지백 Google Sheet 실시간 동기화 — 9개 PG사 · 30컬럼 · 소명 문서 자동 생성
-- Fraud Red Flag 9개 지표 탐지 → 악의성 판정 → 영문 CS 응대 7섹션 템플릿 자동 작성
-- 일일 · 주간 · 월간 · 분기 보고서 자동 생성 (HTML/Confluence/XLSX) + WoW/MoM/YoY 비교
-- 29개 운영 산출물 단독 기획·작성 → GitHub Pages + Confluence 13페이지 배포
+- 12년차 PM/PO 페르소나 — 실무 중심 분석 · 데이터 드리븐 판단
+- CS 데이터 9단계 필터링 파이프라인 — 82% 노이즈 제거 → 45컬럼 정제 출력
+- 13,405건 CS 데이터 × 8개월 × 11개 언어 분석 — 자동 카테고리 + 마켓 분류
+- 차지백 Google Sheet 실시간 동기화 — 9개 PG사 · 30컬럼
+- 주간 E2E 파이프라인 — Zendesk fetch → 정제 → 리포트 → Confluence → 포탈 배포 → Slack 알림
+- 61개 운영 산출물 → GitHub Pages + Confluence 13페이지 배포
 
 ---
 
@@ -235,7 +245,6 @@ Zendesk Raw JSON (12,920건)
   <img src="https://img.shields.io/badge/Claude_Code-191919?style=for-the-badge&logo=anthropic&logoColor=white" />
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/ChromaDB-FF6F00?style=for-the-badge&logo=databricks&logoColor=white" />
   <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" />
   <img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
