@@ -150,7 +150,7 @@ Zendesk Ticket
 [2] 언어 자동 감지 (10개 언어) + Zendesk 태그 교정
     │
     ▼
-[3] 스팸 탐지 P1~P12 ──┬── 운영자 확인 V1~V4
+[3] 스팸 탐지 P1~P12 ──┬── 운영자 확인 V1~V5
     (병렬)               │   (이중결제 · 계정정지 · 작품삭제 · VIP)
     │                    │
     ▼                    ▼
@@ -163,7 +163,7 @@ Zendesk Ticket
 [6] 품질 점수 6차원 평가 → 상담원 확인 → Zendesk 발송
 ```
 
-**핵심 기능**: 🎯 AI Draft 생성 · 📊 실시간 KPI · 🔍 차트 클릭 필터 · 👤 고객 프로필 모달 · 🚫 스팸 P1~P12 · ✅ 운영자 확인 V1~V4 · 📈 품질 6차원 평가 · 🔄 30초 자동 새로고침 · 🤖 시나리오 자동 추천 · 🤖 L3 Auto-Response (Phase 1) · 🔗 티켓 Merge · 📡 Agent Monitor
+**핵심 기능**: 🎯 AI Draft 생성 · 📊 실시간 KPI · 🔍 차트 클릭 필터 · 👤 고객 프로필 모달 · 🚫 스팸 P1~P12 · ✅ 운영자 확인 V1~V5 · 📈 품질 6차원 평가 · 🔄 30초 자동 새로고침 · 🤖 시나리오 자동 추천 · 🤖 L3 Auto-Response (Phase 1) · 🔗 티켓 Merge · 📡 Agent Monitor
 
 **기술 스택**: FastAPI · Vanilla JS SPA · Zendesk REST API · Claude API (SDK + Proxy) · RAG (섹션 기반, 벡터DB 불필요) · Pydantic v2 · pytest (850건) · CI/CD GitHub Actions
 
@@ -172,7 +172,7 @@ Zendesk Ticket
 - 4-Stage 카테고리 분류 파이프라인 — 24개 intent + 9개 카테고리 × 10개 언어 키워드 + Content Legality 시그널
 - 다국어 RAG 지식베이스 — 9개 언어 (EN + FR/DE/ES/JP/PT/TH/CN/IT) · 현지화 템플릿 99개
 - 스팸 감지 P1~P12 — 법률사칭, 소셜미디어, 보안사칭, 영업스팸 등 12개 패턴
-- 시나리오 자동 추천 — 매뉴얼 섹션 번호 정렬, 키워드 기반 1클릭 적용
+- 시나리오 자동 추천 — 22개 키워드 → 15개 시나리오, Post-Status 룰 v1.1 (31개)
 - 품질 점수 6차원 차등 가중치 (template 0.25 / safety 0.20 / actionability 0.20)
 - 고객 프로필 모달 — Zendesk user_fields 매핑 (회원번호, 아이디, VIP, 어드민 링크)
 - 850 tests 전체 통과 · CI/CD GitHub Actions Test Gate
