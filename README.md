@@ -172,7 +172,7 @@ Zendesk Ticket
 - 4-Stage 카테고리 분류 파이프라인 — 24개 intent + 9개 카테고리 × 10개 언어 키워드 + Content Legality 시그널
 - 다국어 RAG 지식베이스 — 9개 언어 (EN + FR/DE/ES/JP/PT/TH/CN/IT) · 현지화 템플릿 99개
 - 스팸 감지 P1~P12 — 법률사칭, 소셜미디어, 보안사칭, 영업스팸 등 12개 패턴
-- 시나리오 자동 추천 — 28개 키워드 → 33개 시나리오, 소비자보호법(CDC) 자동감지, Post-Status 룰 v1.1 (31개)
+- 시나리오 자동 추천 — 28개 키워드 → 33개 시나리오, CDC 자동감지, V7 결제계정 불일치(4.8), Post-Status 룰 v1.1 (31개)
 - 품질 점수 6차원 차등 가중치 (template 0.25 / safety 0.20 / actionability 0.20)
 - 고객 프로필 모달 — Zendesk user_fields 매핑 (회원번호, 아이디, VIP, 어드민 링크)
 - 850 tests 전체 통과 · CI/CD GitHub Actions Test Gate
