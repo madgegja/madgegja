@@ -163,7 +163,7 @@ Zendesk Ticket
 [6] 품질 점수 6차원 평가 → 상담원 확인 → Zendesk 발송
 ```
 
-**핵심 기능**: 🎯 AI Draft 생성 · 📊 실시간 KPI · 🔍 차트 클릭 필터 · 👤 고객 프로필 모달 · 🚫 스팸 P1~P12 · ✅ 운영자 확인 V1~V5 · 📈 품질 6차원 평가 · 🔄 30초 자동 새로고침 · 🤖 시나리오 자동 추천 · 🤖 L3 Auto-Response (Phase 1) · 🔗 티켓 Merge · 📡 Agent Monitor
+**핵심 기능**: 🎯 AI Draft 생성 · 📊 실시간 KPI · 🔍 차트 클릭 필터 · 👤 고객 프로필 모달 · 🚫 스팸 P1~P12 · ✅ 운영자 확인 V1~V5 · 📈 품질 6차원 평가 · 🔄 30초 자동 새로고침 · 🤖 시나리오 자동 추천 · 🤖 L3 Auto-Response (Phase 1) · 💰 환불 분기 드래프트 · 🔗 티켓 Merge · 📡 Agent Monitor
 
 **기술 스택**: FastAPI · Vanilla JS SPA · Zendesk REST API · Claude API (SDK + Proxy) · RAG (섹션 기반, 벡터DB 불필요) · Pydantic v2 · pytest (850건) · CI/CD GitHub Actions
 
