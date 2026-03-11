@@ -73,7 +73,7 @@
       Raw 12,920 tickets → Clean 3,227 tickets → Reports & Charts
     </td>
     <td align="center" width="50%">
-      <a href="https://tg-bizops.github.io/BizOPS/">
+      <a href="https://cs-dashboard.duckdns.org/portal/">
         <img src="https://img.shields.io/badge/🗂️_Portfolio-BizOPS--Portal-0EA5E9?style=for-the-badge&logo=githubpages&logoColor=white" />
       </a>
       <br>
@@ -108,7 +108,7 @@
 ### 🌐 BizOps Artifacts Portal Highlights
 
 ```
-tg-bizops.github.io/BizOPS/
+cs-dashboard.duckdns.org/portal/
 ├── 📞 CS 운영 (10)                    ├── 💬 AI 챗봇 (13)
 │   ├─ 매뉴얼 EN/KO v2.19             │   ├─ 기획·개요 (5)
 │   ├─ Fraud 분석 · 인포그래픽          │   └─ 운영·교육 (8)
