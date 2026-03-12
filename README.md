@@ -56,7 +56,7 @@
       <br><br>
       FastAPI + Vanilla JS SPA · Zendesk 실시간 연동<br>
       AI Draft 엔진 (RAG + Claude) · 스팸 P1~P12 · 품질 6차원<br>
-      10개 마켓 · 1097 tests · Phase 1 Draft+Review 구현 완료
+      10개 마켓 · 1171 tests · 8개 언어 완전 번역 · Phase 1 Draft+Review 구현 완료
     </td>
   </tr>
   <tr>
@@ -110,7 +110,7 @@
 ```
 cs-dashboard.duckdns.org/portal/
 ├── 📞 CS 운영 (10)                    ├── 💬 AI 챗봇 (13)
-│   ├─ 매뉴얼 EN/KO v2.20             │   ├─ 기획·개요 (5)
+│   ├─ 매뉴얼 EN/KO v2.20 + 8개 언어             │   ├─ 기획·개요 (5)
 │   ├─ Fraud 분석 · 인포그래픽          │   └─ 운영·교육 (8)
 │   ├─ 프로세스 플로우 · 로드맵         │
 │   └─ 주간 리포트 아카이브             ├── 🖥️ CS Dashboard (3)
@@ -130,8 +130,8 @@ cs-dashboard.duckdns.org/portal/
 
 **주요 성과**:
 - 61개 문서 단독 기획·작성 — 10개 글로벌 마켓 대응 운영 산출물
-- CS 매뉴얼 EN/KO v2.20 — 13,405건 데이터 실증 분석 기반, 복사 즉시 사용 템플릿
-- CS AI Dashboard — Zendesk 실시간 연동, AI Draft 엔진, 1097 tests
+- CS 매뉴얼 EN/KO v2.20 + 8개 언어 완전 번역 — 13,405건 데이터 실증 분석 기반, 복사 즉시 사용 템플릿
+- CS AI Dashboard — Zendesk 실시간 연동, AI Draft 엔진, 1171 tests, 320/320 시뮬레이션 100%
 - 8개 PG사 차지백 소명 매뉴얼 + 증빙 폼 V5 + 증빙 템플릿
 - FAQ 10개 언어 + 이용약관 10개 언어 — Zendesk 원본 동기화
 - Data-Dense Dashboard 디자인 시스템 — Fira Code/Sans, CSS 변수 팔레트
@@ -171,11 +171,12 @@ Zendesk Ticket
 - Zendesk 실시간 연동 — 티켓 조회/답변/에스컬레이션/내부메모 전체 액션
 - 4-Stage 카테고리 분류 파이프라인 — 24개 intent + 9개 카테고리 × 10개 언어 키워드 + Content Legality 시그널
 - 다국어 RAG 지식베이스 — 9개 언어 (EN + FR/DE/ES/JP/PT/TH/CN/IT) · 현지화 템플릿 99개
+- 8개 언어 CS 매뉴얼 완전 번역 — EN잔류 3~8%, 자동 동기화 파이프라인 (translate + sync)
 - 스팸 감지 P1~P12 — 법률사칭, 소셜미디어, 보안사칭, 영업스팸 등 12개 패턴
 - 시나리오 자동 추천 — 28개 키워드 → 33개 시나리오, CDC 자동감지, V7 결제계정 불일치(4.8), Post-Status 룰 v1.1 (31개)
 - 품질 점수 6차원 차등 가중치 (template 0.25 / safety 0.20 / actionability 0.20)
 - 고객 프로필 모달 — Zendesk user_fields 매핑 (회원번호, 아이디, VIP, 어드민 링크)
-- 1097 tests 전체 통과 · CI/CD GitHub Actions Test Gate
+- 1171 tests 전체 통과 · CI/CD GitHub Actions Test Gate
 - Phase 1(수동확인) 운영 중 → Phase 2(L3 자동) → Phase 3(확대 자동화) 로드맵
 
 ---
