@@ -88,15 +88,16 @@
   <tr>
     <td align="center" width="50%">
       <a href="https://cs-translate.duckdns.org/">
-        <img src="https://img.shields.io/badge/🌐_Project-CS--Translate-F59E0B?style=for-the-badge&logo=fastapi&logoColor=white" />
+        <img src="https://img.shields.io/badge/🌐_Project-AI--Translate-F59E0B?style=for-the-badge&logo=fastapi&logoColor=white" />
       </a>
       <br>
-      <img src="https://img.shields.io/badge/🔒_Private_(toomics--ai--agent/translate)-gray?style=flat-square" />
+      <img src="https://img.shields.io/badge/🔒_Private_Repository-gray?style=flat-square" />
       <br><br>
-      <b>폐쇄환경 AI 번역 시스템</b>
+      <b>AI Translate — 폐쇄환경 AI 번역 시스템</b>
       <br><br>
       FastAPI + SQLite FTS5 · 외부 API 없이 로컬 DB만으로 동작<br>
-      vocab.db 25,070건 · 10개 언어 · 10개 카테고리 · 로그인 불필요
+      vocab.db 25,070건 · 10개 언어 · 10개 카테고리 · 변경 이력 추적<br>
+      12개 소스 통합 · 17단계 우선순위 · 일괄 번역 · 로그인 불필요
     </td>
     <td align="center" width="50%">
       <a href="https://github.com/madgegja/Ai-Chat-bot-project">
@@ -188,6 +189,43 @@ Zendesk Ticket
 - 고객 프로필 모달 — Zendesk user_fields 매핑 (회원번호, 아이디, VIP, 어드민 링크)
 - 1422 tests 전체 통과 · CI/CD GitHub Actions Test Gate
 - Phase 1(수동확인) 운영 중 → Phase 2(L3 자동) → Phase 3(확대 자동화) 로드맵
+
+---
+
+### 🌐 AI Translate Highlights — 폐쇄환경 AI 번역 시스템
+
+```
+번역 소스 12개                        vocab.db
+┌──────────────────────┐              ┌─────────────────────────┐
+│ payment_xlsx (PRI:0) │──┐           │ 25,070건                │
+│ store (PRI:2)        │──┤           │ 10개 언어               │
+│ confluence (PRI:7)   │──┼── upsert ─▶│ 10개 카테고리            │
+│ glossary (PRI:6)     │──┤           │ FTS5 전문검색            │
+│ app_lang (PRI:13)    │──┤           │ 17단계 소스 우선순위      │
+│ ... +7 more          │──┘           └──────────┬──────────────┘
+└──────────────────────┘                         │
+                                                 ▼
+                                    ┌─────────────────────────┐
+                                    │ FastAPI (port 8300)      │
+                                    │ • 용어 검색 (실시간)      │
+                                    │ • 일괄 번역 (1~20건)     │
+                                    │ • 변경 이력 (changelog)   │
+                                    │ • 로그인 불필요           │
+                                    └─────────────────────────┘
+```
+
+**핵심 기능**: 🔍 FTS5 전문검색 · 📦 일괄 번역 · 📋 변경 이력 추적 · 🏷️ 카테고리·소스 필터 · 🔒 사내 전용 (외부 API 없음)
+
+**기술 스택**: FastAPI · SQLite FTS5 · Vanilla JS SPA · vocab.db (13.0MB)
+
+**주요 성과**:
+- 12개 소스에서 25,070건 용어 통합 — 번역 취합본, 프로덕트실 용어집, Confluence, 앱 언어팩 등
+- 17단계 소스 우선순위 — payment_xlsx(0) ~ knowledge(16), 충돌 시 우선순위 자동 적용
+- 10개 언어 × 10개 카테고리 매트릭스 — app_ui, cs_manual, payment, store, glossary 등
+- FTS5 전문검색 인덱스 — 부분 매칭, 다국어 형태소 검색
+- DB 대규모 정리 — 37,839건 → 25,070건 (-34%), 중복·빈값·불용어 제거
+- changelog.db 변경 이력 전수 기록 — 추가/수정/삭제 추적 가능
+- 로그인 불필요 — 사내 네트워크 전용, 즉시 사용 가능
 
 ---
 
