@@ -56,7 +56,7 @@
       <br><br>
       FastAPI + Vanilla JS SPA · Zendesk 실시간 연동<br>
       AI Draft 엔진 (RAG + Claude) · 스팸 P1~P12 · 품질 6차원<br>
-      10개 마켓 · 1303 tests · 8개 언어 완전 번역 · Phase 1 Draft+Review 구현 완료
+      10개 마켓 · 1422 tests · 8개 언어 완전 번역 · Phase 1 Draft+Review 구현 완료
     </td>
   </tr>
   <tr>
@@ -87,6 +87,18 @@
   </tr>
   <tr>
     <td align="center" width="50%">
+      <a href="https://cs-translate.duckdns.org/">
+        <img src="https://img.shields.io/badge/🌐_Project-CS--Translate-F59E0B?style=for-the-badge&logo=fastapi&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/🔒_Private_(toomics--ai--agent/translate)-gray?style=flat-square" />
+      <br><br>
+      <b>폐쇄환경 AI 번역 시스템</b>
+      <br><br>
+      FastAPI + SQLite FTS5 · 외부 API 없이 로컬 DB만으로 동작<br>
+      vocab.db 25,070건 · 10개 언어 · 10개 카테고리 · 로그인 불필요
+    </td>
+    <td align="center" width="50%">
       <a href="https://github.com/madgegja/Ai-Chat-bot-project">
         <img src="https://img.shields.io/badge/💬_Project-Ai--Chat--bot-10B981?style=for-the-badge&logo=anthropic&logoColor=white" />
       </a>
@@ -97,8 +109,6 @@
       <br><br>
       Claude API + FastAPI + ChromaDB 기반 CS 챗봇 프로토타입<br>
       → CS AI Dashboard로 통합 (Phase 1 Draft+Review 구현 완료)
-    </td>
-    <td align="center" width="50%">
     </td>
   </tr>
 </table>
@@ -131,7 +141,7 @@ cs-dashboard.duckdns.org/portal/
 **주요 성과**:
 - 61개 문서 단독 기획·작성 — 10개 글로벌 마켓 대응 운영 산출물
 - CS 매뉴얼 EN/KO v2.20 + 8개 언어 완전 번역 — 13,405건 데이터 실증 분석 기반, 복사 즉시 사용 템플릿
-- CS AI Dashboard — Zendesk 실시간 연동, AI Draft 엔진, 1303 tests, 320/320 시뮬레이션 100%
+- CS AI Dashboard — Zendesk 실시간 연동, AI Draft 엔진, 1422 tests, 320/320 시뮬레이션 100%
 - 8개 PG사 차지백 소명 매뉴얼 + 증빙 폼 V5 + 증빙 템플릿
 - FAQ 10개 언어 + 이용약관 10개 언어 — Zendesk 원본 동기화
 - Data-Dense Dashboard 디자인 시스템 — Fira Code/Sans, CSS 변수 팔레트
@@ -176,7 +186,7 @@ Zendesk Ticket
 - 시나리오 자동 추천 — 39개 키워드 → 33개 시나리오, CDC 자동감지, V7 결제계정 불일치(4.8), Post-Status 룰 v1.1 (31개)
 - 품질 점수 6차원 차등 가중치 (template 0.25 / safety 0.20 / actionability 0.20)
 - 고객 프로필 모달 — Zendesk user_fields 매핑 (회원번호, 아이디, VIP, 어드민 링크)
-- 1303 tests 전체 통과 · CI/CD GitHub Actions Test Gate
+- 1422 tests 전체 통과 · CI/CD GitHub Actions Test Gate
 - Phase 1(수동확인) 운영 중 → Phase 2(L3 자동) → Phase 3(확대 자동화) 로드맵
 
 ---
@@ -209,7 +219,8 @@ Data Ingest → 자동 분류 → 9단계 필터링(82% 노이즈 제거)
 - 13,405건 CS 데이터 × 8개월 × 11개 언어 분석 — 자동 카테고리 + 마켓 분류
 - 차지백 Google Sheet 실시간 동기화 — 9개 PG사 · 30컬럼
 - 주간 E2E 파이프라인 — Zendesk fetch → 정제 → 리포트 → Confluence → 포탈 배포 → Slack 알림
-- 61개 운영 산출물 → GitHub Pages + Confluence 13페이지 배포
+- 61개 운영 산출물 → GitHub Pages + Confluence 16페이지 배포
+- 폐쇄환경 AI 번역 시스템 — vocab.db 25,070건, 10개 언어, FTS5 전문검색, 로그인 불필요
 
 ---
 
@@ -249,6 +260,7 @@ Zendesk Raw JSON (12,920건)
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
   <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" />
   <img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
   <img src="https://img.shields.io/badge/Confluence-172B4D?style=for-the-badge&logo=confluence&logoColor=white" />
   <img src="https://img.shields.io/badge/Zendesk-03363D?style=for-the-badge&logo=zendesk&logoColor=white" />
