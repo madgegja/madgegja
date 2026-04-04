@@ -112,6 +112,34 @@
       → CS AI Dashboard로 통합 (Phase 1 Draft+Review 구현 완료)
     </td>
   </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/CS-claw">
+        <img src="https://img.shields.io/badge/🤖_Project-CS--claw-E11D48?style=for-the-badge&logo=telegram&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/🔓_Public_Repository-green?style=flat-square" />
+      <br><br>
+      <b>CS_claw — BizOps Telegram AI Agent</b>
+      <br><br>
+      Claude Opus 대화 + Vision · RAG 다국어 CS 매뉴얼<br>
+      에이전트 메모리 (L1 요약 + L2 에피소드) · 자연어 자동 라우팅 15패턴<br>
+      서버 운영 (/deploy /code /audit) · systemd · 비동기 polling
+    </td>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/nexus-dashboard">
+        <img src="https://img.shields.io/badge/🔮_Project-Nexus--Dashboard-8B5CF6?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/🔓_Public_Repository-green?style=flat-square" />
+      <br><br>
+      <b>Nexus — Claude Code Workspace Dashboard</b>
+      <br><br>
+      Next.js 16 + shadcn/ui · 에이전트/스킬/훅 CRUD<br>
+      CLAUDE.md 편집 · 세션 모니터 · Export/Import · JWT 인증<br>
+      8페이지 · 10 API · 프로젝트 필터 · 검색 하이라이팅
+    </td>
+  </tr>
 </table>
 
 ---
