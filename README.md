@@ -118,7 +118,7 @@
         <img src="https://img.shields.io/badge/🤖_Project-CS--claw-E11D48?style=for-the-badge&logo=telegram&logoColor=white" />
       </a>
       <br>
-      <img src="https://img.shields.io/badge/🔓_Public_Repository-green?style=flat-square" />
+      <img src="https://img.shields.io/badge/🔒_Private_Repository-gray?style=flat-square" />
       <br><br>
       <b>CS_claw — BizOps Telegram AI Agent</b>
       <br><br>
@@ -131,7 +131,7 @@
         <img src="https://img.shields.io/badge/🔮_Project-Nexus--Dashboard-8B5CF6?style=for-the-badge&logo=nextdotjs&logoColor=white" />
       </a>
       <br>
-      <img src="https://img.shields.io/badge/🔓_Public_Repository-green?style=flat-square" />
+      <img src="https://img.shields.io/badge/🔒_Private_Repository-gray?style=flat-square" />
       <br><br>
       <b>Nexus — Claude Code Workspace Dashboard</b>
       <br><br>
