@@ -79,7 +79,7 @@
         <img src="https://img.shields.io/badge/🗂️_Portfolio-BizOPS--Portal-0EA5E9?style=for-the-badge&logo=githubpages&logoColor=white" />
       </a>
       <br>
-      <img src="https://img.shields.io/badge/🌐_Public_Portfolio-live-0EA5E9?style=flat-square" />
+      <img src="https://img.shields.io/badge/🔒_Private_Repository-gray?style=flat-square" />
       <br><br>
       <b>BizOps Artifacts Portal</b>
       <br><br>
