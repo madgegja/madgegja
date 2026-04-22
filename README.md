@@ -26,6 +26,8 @@
 - Analyzing operational data across **10 global markets** (EN/FR/ES/PT/DE/TH/JP/CN/IT/KR)
 - Interested in **AI-powered operations**, **data-driven process improvement**, and **operational efficiency**
 
+> **최근 운영 성과 (2024.06 ~ )** — FRT **52%↓** · RT **57%↓** · 주간 리포팅 **48h → 1h (95%↓)** · 월 **1,500+건** 다국어 CS 분석 · **61개** 운영 산출물 단독 기획
+
 ---
 
 ### What I'm Working On
@@ -88,7 +90,7 @@
   <tr>
     <td align="center" width="50%">
       <a href="https://cs-translate.duckdns.org/">
-        <img src="https://img.shields.io/badge/🌐_Project-AI--Translate-F59E0B?style=for-the-badge&logo=fastapi&logoColor=white" />
+        <img src="https://img.shields.io/badge/🌐_Project-AI--Translate-F59E0B?style=for-the-badge&logo=googletranslate&logoColor=white" />
       </a>
       <br>
       <img src="https://img.shields.io/badge/🔒_Private_Repository-gray?style=flat-square" />
@@ -204,7 +206,7 @@ Zendesk Ticket
 
 **핵심 기능**: 🎯 AI Draft 생성 · 📊 실시간 KPI · 🔍 차트 클릭 필터 · 👤 고객 프로필 모달 · 🚫 스팸 P1~P12 · ✅ 운영자 확인 V1~V5 · 📈 품질 6차원 평가 · 🔄 30초 자동 새로고침 · 🤖 시나리오 자동 추천 · 🤖 L3 Auto-Response (Phase 1) · 💰 환불 분기 드래프트 · 🔗 티켓 Merge · 📡 Agent Monitor
 
-**기술 스택**: FastAPI · Vanilla JS SPA · Zendesk REST API · Claude API (SDK + Proxy) · RAG (섹션 기반, 벡터DB 불필요) · Pydantic v2 · pytest (1097건) · CI/CD GitHub Actions
+**기술 스택**: FastAPI · Vanilla JS SPA · Zendesk REST API · Claude API (SDK + Proxy) · RAG (섹션 기반, 벡터DB 불필요) · Pydantic v2 · pytest (1422건) · CI/CD GitHub Actions
 
 **주요 성과**:
 - Zendesk 실시간 연동 — 티켓 조회/답변/에스컬레이션/내부메모 전체 액션
@@ -314,6 +316,80 @@ Zendesk Raw JSON (12,920건)
 
 ---
 
+### 🧪 Side Projects — Personal Lab
+
+업무 외 개인 관심사(AI 응용층 확장)로 굴리는 퍼블릭 레포들.
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/omd-ultra">
+        <img src="https://img.shields.io/badge/🎨_Project-omd--ultra-EC4899?style=for-the-badge&logo=radixui&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/🌐_Public-HTML-EC4899?style=flat-square" />
+      <br><br>
+      <b>OmD + shadcn/ui + Radix — 확장 DESIGN.md 생성기</b>
+      <br><br>
+      브랜드 레퍼런스 → DESIGN.md(OmD v0.1 Philosophy) → shadcn 컴포넌트<br>
+      oh-my-design 확장 포크 · 67 refs · design-orchestrator agent
+    </td>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/gh-trends">
+        <img src="https://img.shields.io/badge/📈_Project-gh--trends-22C55E?style=for-the-badge&logo=github&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/🌐_Public-Python-22C55E?style=flat-square" />
+      <br><br>
+      <b>GitHub Trending CLI + MCP 서버</b>
+      <br><br>
+      언어·기간별 트렌딩 레포 수집 → Claude로 테마 다이제스트 자동 생성<br>
+      CLI 테이블 출력 · MCP 프로토콜로 AI 클라이언트 통합
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/notes-rag">
+        <img src="https://img.shields.io/badge/📝_Project-notes--rag-8B5CF6?style=for-the-badge&logo=obsidian&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/🌐_Public-Python-8B5CF6?style=flat-square" />
+      <br><br>
+      <b>Local RAG for Markdown Notes</b>
+      <br><br>
+      오프라인 다국어 임베딩으로 개인 노트 디렉터리 시맨틱 검색<br>
+      로컬 LLM 응답 생성 · CLI 인덱싱/쿼리 · 외부 API 없음
+    </td>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/llm-lab">
+        <img src="https://img.shields.io/badge/🧬_Project-llm--lab-0EA5E9?style=for-the-badge&logo=openai&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/🌐_Public-Python-0EA5E9?style=flat-square" />
+      <br><br>
+      <b>Local LLM Benchmark Harness</b>
+      <br><br>
+      OpenAI 호환 엔드포인트 기반 로컬 모델(Darwin, Gemma4 등) 평가<br>
+      모델 간 성능 비교 · 상세 결과 리포트
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <a href="https://github.com/madgegja/csy-p.com">
+        <img src="https://img.shields.io/badge/🏠_Personal-csy--p.com-F97316?style=for-the-badge&logo=githubpages&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/🌐_Public-HTML/CSS-F97316?style=flat-square" />
+      <br><br>
+      <b>Personal Landing Page</b>
+      <br><br>
+      포트폴리오·이력·프로젝트 허브 정적 사이트 · SEO·모션·스크롤 인터랙션
+    </td>
+  </tr>
+</table>
+
+---
+
 ### Tech Stack
 
 <p>
@@ -336,4 +412,8 @@ Zendesk Raw JSON (12,920건)
 
 <p align="center">
   <i>"Data doesn't lie. It just needs someone to ask the right questions — or an AI Agent to find them."</i>
+</p>
+
+<p align="center">
+  <sub>Last updated: 2026-04-22 (KST)</sub>
 </p>
