@@ -318,21 +318,89 @@ Zendesk Raw JSON (12,920건)
 
 ### 🧪 Side Projects — Personal Lab
 
-업무 외 개인 관심사(AI 응용층 확장)로 굴리는 퍼블릭 레포들.
+업무 외 개인 관심사(AI 응용층 · 디자인 시스템 · PWA · 캐릭터 엔진)로 굴리는 사이드 프로젝트들.
 
 <table>
   <tr>
-    <td align="center" width="50%">
-      <a href="https://github.com/madgegja/omd-ultra">
-        <img src="https://img.shields.io/badge/🎨_Project-omd--ultra-EC4899?style=for-the-badge&logo=radixui&logoColor=white" />
+    <td align="center" colspan="2">
+      <a href="https://github.com/madgegja/toomics-chat-poc">
+        <img src="https://img.shields.io/badge/💬_Featured-LLM_Character_Chat_Engine_PoC-DC2626?style=for-the-badge&logo=fastapi&logoColor=white" />
       </a>
       <br>
-      <img src="https://img.shields.io/badge/🌐_Public-HTML-EC4899?style=flat-square" />
+      <img src="https://img.shields.io/badge/🔒_Private_Repository-gray?style=flat-square" />
+      <img src="https://img.shields.io/badge/v1.0-SHIPPED_2026--05--17-22C55E?style=flat-square" />
       <br><br>
-      <b>OmD + shadcn/ui + Radix — 확장 DESIGN.md 생성기</b>
+      <b>LLM 캐릭터챗 엔진 PoC</b>
+      <br><br>
+      FastAPI + SSE 스트리밍 · TRPG state machine (chapter 0~5 + flags + inventory)<br>
+      호감도 5단계 · 감정 5축 · SQLite vault · Replicate WAI 이미지 생성 (3-5s/장)<br>
+      Opus/Grok 듀얼 모델 라우팅 · 25 commits · v1.0 출시 (2026-05-17 KST)
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/nabi">
+        <img src="https://img.shields.io/badge/🦋_Project-nabi-9333EA?style=for-the-badge&logo=tauri&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/🔒_Private_Repository-gray?style=flat-square" />
+      <br><br>
+      <b>nabi — 데스크탑 2D 캐릭터 비서</b>
+      <br><br>
+      Tauri + Live2D + Wan 2.2 i2v 모션 루프<br>
+      5-tier 베리에이션 (idle/blink/talking/emotion/cross-fade) · SFW 캐쥬얼 여친 비서 톤
+    </td>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/omd-lab">
+        <img src="https://img.shields.io/badge/🎨_Project-omd--lab-EC4899?style=for-the-badge&logo=radixui&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/🔒_Private_Repository-gray?style=flat-square" />
+      <br><br>
+      <b>omd-lab — Design References + shadcn Registry</b>
+      <br><br>
+      Next.js 15 references gallery (Builder/Curation/Playground)<br>
+      shadcn-compatible registry · oh-my-design 후속 포크 · 67 refs
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/bodyweight">
+        <img src="https://img.shields.io/badge/💪_Project-bodyweight-10B981?style=for-the-badge&logo=pwa&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/🔒_Private_Repository-gray?style=flat-square" />
+      <br><br>
+      <b>bodyweight — PWA 운동 트래커</b>
+      <br><br>
+      Vite + React 19 + Dexie · PIN 인증 · 근육 다이어그램 + pose animation<br>
+      세션 로그 · 프리셋 루틴 · 오프라인 동작
+    </td>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/csy-p.com">
+        <img src="https://img.shields.io/badge/🏠_Personal-csy--p.com-F97316?style=for-the-badge&logo=githubpages&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/🌐_Public-HTML/CSS-F97316?style=flat-square" />
+      <br><br>
+      <b>Personal Landing Page</b>
+      <br><br>
+      포트폴리오·이력·프로젝트 허브 정적 사이트<br>
+      SEO·모션·스크롤 인터랙션 (animated hero, scroll progress, back-to-top)
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/omd-ultra">
+        <img src="https://img.shields.io/badge/🎨_Project-omd--ultra-DB2777?style=for-the-badge&logo=radixui&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/🌐_Public-HTML-DB2777?style=flat-square" />
+      <br><br>
+      <b>omd-ultra — DESIGN.md 생성기 (omd-lab 전신)</b>
       <br><br>
       브랜드 레퍼런스 → DESIGN.md(OmD v0.1 Philosophy) → shadcn 컴포넌트<br>
-      oh-my-design 확장 포크 · 67 refs · design-orchestrator agent
+      oh-my-design 확장 포크 · design-orchestrator agent
     </td>
     <td align="center" width="50%">
       <a href="https://github.com/madgegja/gh-trends">
@@ -373,19 +441,6 @@ Zendesk Raw JSON (12,920건)
       모델 간 성능 비교 · 상세 결과 리포트
     </td>
   </tr>
-  <tr>
-    <td align="center" colspan="2">
-      <a href="https://github.com/madgegja/csy-p.com">
-        <img src="https://img.shields.io/badge/🏠_Personal-csy--p.com-F97316?style=for-the-badge&logo=githubpages&logoColor=white" />
-      </a>
-      <br>
-      <img src="https://img.shields.io/badge/🌐_Public-HTML/CSS-F97316?style=flat-square" />
-      <br><br>
-      <b>Personal Landing Page</b>
-      <br><br>
-      포트폴리오·이력·프로젝트 허브 정적 사이트 · SEO·모션·스크롤 인터랙션
-    </td>
-  </tr>
 </table>
 
 ---
@@ -415,5 +470,5 @@ Zendesk Raw JSON (12,920건)
 </p>
 
 <p align="center">
-  <sub>Last updated: 2026-04-22 (KST)</sub>
+  <sub>Last updated: 2026-05-18 (KST)</sub>
 </p>
