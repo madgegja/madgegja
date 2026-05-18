@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>VOC → Service Change Loop</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:#0f172a;
+    font-family:'Outfit','Inter','Noto Sans KR',-apple-system,sans-serif;
+    color:#e2e8f0;
+    padding:48px 56px;
+    width:1600px; height:900px;
+    overflow:hidden; position:relative;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:''; position:absolute; inset:0;
+    background:radial-gradient(ellipse 800px 400px at 100% 0%, rgba(8,145,178,0.10), transparent 60%),
+               radial-gradient(ellipse 600px 300px at 0% 100%, rgba(59,130,246,0.08), transparent 60%);
+    pointer-events:none;
+  }
+
+  .head{margin-bottom:24px;position:relative;z-index:2}
+  .tag{font-size:11px;font-weight:600;letter-spacing:0.18em;color:#3b82f6;text-transform:uppercase;margin-bottom:8px}
+  h1{font-size:34px;font-weight:700;color:#fff;letter-spacing:-0.022em;line-height:1.10}
+  .sub{font-size:13px;color:#94a3b8;margin-top:6px;max-width:920px;line-height:1.50}
+
+  /* ─ The 5-stage loop ─ */
+  .loop{
+    display:grid; grid-template-columns:repeat(5,1fr); gap:20px;
+    margin-top:20px; position:relative; z-index:2;
+  }
+  .stage{
+    padding:20px 18px 18px;
+    background:#1e293b;
+    border:1px solid rgba(148,163,184,0.12);
+    border-top:3px solid #3b82f6;
+    border-radius:10px;
+    position:relative;
+    min-height:280px;
+    display:flex; flex-direction:column;
+  }
+  .stage:nth-child(1){border-top-color:#22c55e}
+  .stage:nth-child(2){border-top-color:#3b82f6}
+  .stage:nth-child(3){border-top-color:#a855f7}
+  .stage:nth-child(4){border-top-color:#f59e0b}
+  .stage:nth-child(5){border-top-color:#0891b2}
+
+  .stage .num{
+    font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.10em;
+    color:#64748b; margin-bottom:6px;
+  }
+  .stage .ttl{
+    font-size:16px; font-weight:700; color:#fff; line-height:1.15; margin-bottom:6px;
+    letter-spacing:-0.012em;
+  }
+  .stage .ttl-en{
+    font-size:11px; color:#3b82f6; letter-spacing:0.06em; text-transform:uppercase;
+    font-weight:600; margin-bottom:12px;
+  }
+  .stage .desc{
+    font-size:11.5px; color:#cbd5e1; line-height:1.55; margin-bottom:auto;
+  }
+  .stage .data{
+    margin-top:14px; padding-top:12px;
+    border-top:1px dashed rgba(148,163,184,0.15);
+  }
+  .stage .data .v{
+    font-family:'Outfit',sans-serif; font-size:18px; font-weight:700; color:#fff; line-height:1;
+    letter-spacing:-0.016em;
+  }
+  .stage .data .l{font-size:10px; color:#94a3b8; margin-top:4px}
+
+  /* Connectors */
+  .arrow-row{
+    display:grid; grid-template-columns:repeat(5,1fr); gap:20px;
+    margin-top:14px; position:relative; z-index:2;
+  }
+  .arr-cell{
+    display:flex; justify-content:center; align-items:center;
+    color:#475569; font-size:18px; font-weight:300;
+  }
+  /* loop-back arrow visual */
+  .loop-back{
+    margin-top:18px;
+    padding:12px 18px;
+    background:rgba(8,145,178,0.08);
+    border:1px solid rgba(8,145,178,0.30);
+    border-radius:8px;
+    display:flex; align-items:center; gap:14px;
+    position:relative; z-index:2;
+  }
+  .loop-back .lb-tag{
+    font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.16em;
+    color:#22d3ee; text-transform:uppercase; font-weight:600;
+  }
+  .loop-back .lb-text{font-size:11.5px; color:#cbd5e1; line-height:1.50}
+
+  /* Stats strip */
+  .stats{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:14px;
+    margin-top:22px; position:relative; z-index:2;
+  }
+  .st{
+    padding:13px 16px;
+    background:rgba(30,41,59,0.55);
+    border:1px solid rgba(148,163,184,0.10);
+    border-left:2.5px solid #3b82f6;
+    border-radius:8px;
+  }
+  .st .v{font-size:22px; font-weight:700; color:#fff; line-height:1; letter-spacing:-0.020em}
+  .st .v small{font-size:13px; color:#94a3b8; font-weight:500; margin-left:3px}
+  .st .l{font-size:10.5px; color:#94a3b8; margin-top:4px; line-height:1.40}
+
+  .footer{
+    position:absolute; bottom:24px; left:56px; right:56px;
+    display:flex; justify-content:space-between;
+    font-size:10.5px; color:#475569; letter-spacing:0.04em;
+    border-top:1px solid rgba(148,163,184,0.08);
+    padding-top:14px;
+  }
+  .footer .right{font-family:'JetBrains Mono',monospace;color:#64748b}
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div class="tag">CS · 운영 사이클 · CLOSED LOOP</div>
+  <h1>VOC → 근본 원인 → 서비스 구조 변경</h1>
+  <div class="sub">"왜 이 문의가 발생했는지" 데이터로 정의 · 반복 패턴 추출 · 프로덕트·결제·콘텐츠 팀과 협업해 원인 단에서 제거 · 다시는 발생하지 않도록 서비스 구조를 바꾼다.</div>
+</div>
+
+<div class="loop">
+  <div class="stage">
+    <div class="num">01</div>
+    <div class="ttl">VOC 인입</div>
+    <div class="ttl-en">Inbound</div>
+    <div class="desc">10개 마켓·10개 언어 다국어 인바운드. Zendesk 채널 통합 · 17 카테고리 자동 분류 · 스팸 봇 12-패턴 필터.</div>
+    <div class="data">
+      <div class="v">1,600+ <small>/ 월 (필터 후)</small></div>
+      <div class="l">원천 인입 28k~42k/월</div>
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="num">02</div>
+    <div class="ttl">패턴 추출</div>
+    <div class="ttl-en">Pattern Mining</div>
+    <div class="desc">8개월 누적 데이터 분석 → 반복 클러스터 상위 5건 선정. L1 / L2 / L3 분포로 리소스 영향도 산정. 카테고리·마켓·언어별 교차 비교.</div>
+    <div class="data">
+      <div class="v">12,464 <small>tickets · 8mo</small></div>
+      <div class="l">L3 셀프서비스 85.3%</div>
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="num">03</div>
+    <div class="ttl">근본 원인 진단</div>
+    <div class="ttl-en">Root Cause</div>
+    <div class="desc">증상이 아닌 원인. 5 Whys + 데이터 트레이스 + 프로덕트·결제·콘텐츠 팀 인터뷰. "왜 이 분류 1건이 매주 30건 들어오는지"까지.</div>
+    <div class="data">
+      <div class="v">5 → 3 root causes</div>
+      <div class="l">분기당 평균 도출</div>
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="num">04</div>
+    <div class="ttl">서비스 구조 변경</div>
+    <div class="ttl-en">Service Change</div>
+    <div class="desc">결제 실패 안내 카피 표준화 · 자동 환불 트리거 · 콘텐츠 표시 룰 수정 등 프로덕트 측 개선. RFC 작성 → 임원 보고 → 우선순위 큐.</div>
+    <div class="data">
+      <div class="v">RFC + JIRA</div>
+      <div class="l">분기별 추진 과제</div>
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="num">05</div>
+    <div class="ttl">측정 · 검증</div>
+    <div class="ttl-en">Verify</div>
+    <div class="desc">변경 후 동일 카테고리 재유입률 · FRT · RT · L3 비율을 4주 후 재측정. 기대 대비 실측 차이를 분기 회고에 반영.</div>
+    <div class="data">
+      <div class="v">FRT 52%↓ <small>· RT 57%↓</small></div>
+      <div class="l">L3 84.8 → 88% (+3.4%p)</div>
+    </div>
+  </div>
+</div>
+
+<div class="loop-back">
+  <span class="lb-tag">↺ Loop Back</span>
+  <span class="lb-text">측정 결과를 다시 §02 패턴 추출 단계로 환류 — 4주 단위 폐쇄 루프. 단발성 이슈 대응이 아닌 반복 가능한 운영 사이클.</span>
+</div>
+
+<div class="stats">
+  <div class="st"><div class="v">17</div><div class="l">카테고리 표준화 (다국어 80+ 템플릿)</div></div>
+  <div class="st"><div class="v">10 / 10</div><div class="l">마켓 / 언어 운영</div></div>
+  <div class="st"><div class="v">+3.4<small>%p</small></div><div class="l">L3 셀프서비스 비율 향상 (84.8 → 88)</div></div>
+  <div class="st"><div class="v">95<small>%↓</small></div><div class="l">리포팅 사이클 자동화 (48h → 1h)</div></div>
+</div>
+
+<div class="footer">
+  <span>VOC → Service Change · CS 운영 사이클 · 2026.05</span>
+  <span class="right">Toomics Global · BizOps팀 6명 · 작성: 유종선</span>
+</div>
+
+</body>
+</html>

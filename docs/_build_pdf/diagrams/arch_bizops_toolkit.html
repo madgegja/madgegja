@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>bizops-automation-toolkit · Architecture</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:#0f172a;
+    font-family:'Outfit','Inter','Noto Sans KR',-apple-system,sans-serif;
+    color:#e2e8f0;
+    padding:48px 56px;
+    width:1600px; height:900px;
+    overflow:hidden; position:relative;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:''; position:absolute; inset:0;
+    background:radial-gradient(ellipse 700px 350px at 50% 50%, rgba(59,130,246,0.10), transparent 60%);
+    pointer-events:none;
+  }
+
+  .head{margin-bottom:24px;position:relative;z-index:2}
+  .tag{font-size:11px;font-weight:600;letter-spacing:0.18em;color:#3b82f6;text-transform:uppercase;margin-bottom:8px}
+  h1{font-size:34px;font-weight:700;color:#fff;letter-spacing:-0.022em;line-height:1.10}
+  .sub{font-size:13px;color:#94a3b8;margin-top:6px}
+
+  .layout{
+    display:grid; grid-template-columns:1fr 1.4fr; gap:36px; margin-top:14px;
+    position:relative; z-index:2;
+  }
+
+  /* Left: hub-and-spoke diagram */
+  .hub-wrap{
+    position:relative; height:560px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .hub-svg{position:absolute;inset:0;pointer-events:none}
+  .hub-center{
+    width:200px; height:200px;
+    border-radius:50%;
+    background:linear-gradient(180deg,#1d2f4a,#0f172a);
+    border:2px solid #3b82f6;
+    box-shadow:0 0 0 8px rgba(59,130,246,0.06), 0 0 60px rgba(59,130,246,0.20);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    position:relative; z-index:3;
+  }
+  .hub-center .l{font-size:9.5px; letter-spacing:0.16em; color:#60a5fa; font-weight:600; text-transform:uppercase}
+  .hub-center .n{font-size:18px; font-weight:700; color:#fff; margin-top:6px}
+  .hub-center .m{font-family:'JetBrains Mono',monospace; font-size:10px; color:#94a3b8; margin-top:4px}
+
+  .spoke{
+    position:absolute;
+    background:#1e293b;
+    border:1px solid rgba(148,163,184,0.18);
+    border-radius:10px;
+    padding:11px 14px;
+    width:170px;
+    z-index:2;
+  }
+  .spoke .icon{
+    font-size:9px; letter-spacing:0.16em; font-weight:600;
+    text-transform:uppercase; margin-bottom:3px;
+  }
+  .spoke .name{font-size:13px; font-weight:600; color:#f1f5f9; margin-bottom:3px}
+  .spoke .meta{font-size:10px; color:#94a3b8; line-height:1.40; font-family:'JetBrains Mono',monospace}
+
+  .spoke.zd{top:30px; left:-10px; border-color:rgba(34,197,94,0.40)}
+  .spoke.zd .icon{color:#22c55e}
+  .spoke.gs{top:30px; right:-10px; border-color:rgba(244,114,182,0.30)}
+  .spoke.gs .icon{color:#f472b6}
+  .spoke.sl{bottom:30px; left:-10px; border-color:rgba(168,85,247,0.30)}
+  .spoke.sl .icon{color:#a855f7}
+  .spoke.cf{bottom:30px; right:-10px; border-color:rgba(34,211,238,0.30)}
+  .spoke.cf .icon{color:#22d3ee}
+
+  /* Right: descriptions and outcomes */
+  .right-col{display:flex;flex-direction:column;gap:18px}
+
+  .feat-list{display:flex;flex-direction:column;gap:11px}
+  .feat-row{
+    display:flex; align-items:flex-start; gap:14px;
+    padding:14px 16px;
+    background:rgba(30,41,59,0.55);
+    border:1px solid rgba(148,163,184,0.10);
+    border-left:2.5px solid #3b82f6;
+    border-radius:8px;
+  }
+  .feat-row .num{
+    font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600;
+    color:#3b82f6; letter-spacing:0.10em; padding-top:2px; flex-shrink:0;
+  }
+  .feat-row .body{flex:1}
+  .feat-row .head-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px}
+  .feat-row .ttl{font-size:13px; font-weight:600; color:#f1f5f9}
+  .feat-row .src{font-family:'JetBrains Mono',monospace; font-size:10px; color:#64748b}
+  .feat-row .dsc{font-size:11px; color:#94a3b8; line-height:1.45}
+
+  .outcome{
+    display:grid; grid-template-columns:1fr 1fr; gap:14px;
+    margin-top:6px;
+  }
+  .out{
+    padding:14px 16px;
+    background:linear-gradient(180deg,#1e293b,#1a2c3a);
+    border:1px solid rgba(59,130,246,0.30);
+    border-radius:8px;
+    text-align:left;
+  }
+  .out .v{font-size:24px; font-weight:700; color:#fff; line-height:1; letter-spacing:-0.020em}
+  .out .v small{font-size:14px; color:#94a3b8; font-weight:500; margin-left:3px}
+  .out .l{font-size:11px; color:#94a3b8; margin-top:5px; line-height:1.35}
+
+  .footer{
+    position:absolute; bottom:24px; left:56px; right:56px;
+    display:flex; justify-content:space-between;
+    font-size:10.5px; color:#475569; letter-spacing:0.04em;
+    border-top:1px solid rgba(148,163,184,0.08);
+    padding-top:14px;
+  }
+  .footer .right{font-family:'JetBrains Mono',monospace;color:#64748b}
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div class="tag">CS OPS · 4-PLATFORM INTEGRATION</div>
+  <h1>bizops-automation-toolkit</h1>
+  <div class="sub">Modular Python toolkit · 4 platform APIs · 95% reporting time reduction</div>
+</div>
+
+<div class="layout">
+
+  <!-- LEFT: hub-and-spoke -->
+  <div class="hub-wrap">
+    <svg class="hub-svg" viewBox="0 0 480 560" preserveAspectRatio="none">
+      <!-- 4 lines from corners to center -->
+      <line x1="100" y1="80"  x2="240" y2="280" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,4"/>
+      <line x1="380" y1="80"  x2="240" y2="280" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,4"/>
+      <line x1="100" y1="490" x2="240" y2="280" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,4"/>
+      <line x1="380" y1="490" x2="240" y2="280" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,4"/>
+    </svg>
+
+    <div class="hub-center">
+      <div class="l">orchestrator</div>
+      <div class="n">Python</div>
+      <div class="m">pandas · API</div>
+    </div>
+
+    <div class="spoke zd">
+      <div class="icon">Source</div>
+      <div class="name">Zendesk API</div>
+      <div class="meta">티켓 풀 + Macros</div>
+    </div>
+    <div class="spoke gs">
+      <div class="icon">Sync</div>
+      <div class="name">Google Sheets API</div>
+      <div class="meta">차지백 실시간</div>
+    </div>
+    <div class="spoke sl">
+      <div class="icon">Notify</div>
+      <div class="name">Slack Webhook</div>
+      <div class="meta">팀 다이제스트</div>
+    </div>
+    <div class="spoke cf">
+      <div class="icon">Publish</div>
+      <div class="name">Confluence API</div>
+      <div class="meta">주간 리포트</div>
+    </div>
+  </div>
+
+  <!-- RIGHT: features + outcomes -->
+  <div class="right-col">
+
+    <div class="feat-list">
+      <div class="feat-row">
+        <div class="num">01</div>
+        <div class="body">
+          <div class="head-row"><div class="ttl">Weekly HTML Report Auto-gen</div><div class="src">→ Confluence</div></div>
+          <div class="dsc">Zendesk 데이터 풀 → 분석 · 차트 → HTML 리포트 → Confluence 자동 게시. 매주 월요일 1회 트리거.</div>
+        </div>
+      </div>
+      <div class="feat-row">
+        <div class="num">02</div>
+        <div class="body">
+          <div class="head-row"><div class="ttl">Chargeback Real-time Sync</div><div class="src">→ Sheets</div></div>
+          <div class="dsc">9개 PG 차지백 데이터를 5분 주기로 Sheets 동기화 + 임계치 초과 시 Slack 자동 알림.</div>
+        </div>
+      </div>
+      <div class="feat-row">
+        <div class="num">03</div>
+        <div class="body">
+          <div class="head-row"><div class="ttl">Slack Team Digest</div><div class="src">→ Slack</div></div>
+          <div class="dsc">매일 06:00 KST · 어제 처리 건수 · 오늘 큐 · SLA 이상 알림을 #bizops 채널로 push.</div>
+        </div>
+      </div>
+      <div class="feat-row">
+        <div class="num">04</div>
+        <div class="body">
+          <div class="head-row"><div class="ttl">Confluence Auto-updater</div><div class="src">→ Confluence</div></div>
+          <div class="dsc">SOP 변경 시 카테고리별 매뉴얼·아카이브를 자동 갱신. 58 문서 일관 관리.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="outcome">
+      <div class="out">
+        <div class="v">2 day → 1 hr</div>
+        <div class="l">Reporting cycle · 95% 절감 · 47h/wk 회수</div>
+      </div>
+      <div class="out">
+        <div class="v">58<small> docs · 9 cat</small></div>
+        <div class="l">단일 운영자 모든 SOP · 매뉴얼 발행</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  <span>bizops-automation-toolkit · 4-platform integration · 2026.05</span>
+  <span class="right">github.com/madgegja · MIT · Python 3.11+</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>cs-ai-dashboard · System Architecture</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:#0f172a;
+    font-family:'Outfit','Inter','Noto Sans KR',-apple-system,sans-serif;
+    color:#e2e8f0;
+    padding:48px 56px;
+    width:1600px;
+    height:900px;
+    overflow:hidden;
+    position:relative;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:'';
+    position:absolute; top:0; left:0; right:0; bottom:0;
+    background:radial-gradient(ellipse 800px 400px at 80% -10%, rgba(59,130,246,0.10), transparent 60%),
+               radial-gradient(ellipse 600px 300px at 10% 110%, rgba(8,145,178,0.06), transparent 60%);
+    pointer-events:none;
+  }
+
+  .head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px;position:relative}
+  .head-l .tag{
+    font-size:11px; font-weight:600; letter-spacing:0.18em; color:#3b82f6;
+    margin-bottom:8px; text-transform:uppercase;
+  }
+  .head-l h1{
+    font-size:34px; font-weight:700; line-height:1.10; color:#fff;
+    letter-spacing:-0.022em;
+  }
+  .head-l .sub{
+    font-size:13px; color:#94a3b8; margin-top:6px; font-weight:400;
+  }
+  .head-r{
+    text-align:right;
+  }
+  .head-r .meta{
+    font-size:10px; letter-spacing:0.14em; color:#64748b; text-transform:uppercase; margin-bottom:4px;
+  }
+  .head-r .url{
+    font-family:'JetBrains Mono','SF Mono',monospace;
+    font-size:11px; color:#3b82f6;
+  }
+
+  /* ─ Pipeline ─ */
+  .pipeline{
+    display:flex;align-items:center;gap:14px;flex-wrap:nowrap;margin-top:6px;
+    position:relative;
+  }
+  .col{
+    display:flex;flex-direction:column;gap:10px;align-items:stretch;flex:0 0 auto;
+  }
+  .node{
+    background:#1e293b;
+    border:1px solid rgba(148,163,184,0.18);
+    border-radius:10px;
+    padding:14px 16px 12px;
+    min-width:165px;
+    position:relative;
+    transition:border-color .2s;
+  }
+  .node .label{
+    font-size:9.5px; letter-spacing:0.16em; color:#64748b;
+    text-transform:uppercase; font-weight:600; margin-bottom:4px;
+  }
+  .node .name{
+    font-size:14px; font-weight:600; color:#f1f5f9; line-height:1.20;
+    margin-bottom:4px;
+  }
+  .node .meta{
+    font-size:10.5px; color:#94a3b8; line-height:1.40;
+    font-family:'JetBrains Mono',monospace;
+    letter-spacing:-0.005em;
+  }
+
+  .node.entry{border-color:rgba(34,197,94,0.40); background:linear-gradient(180deg,#1e293b,#1a2c3a)}
+  .node.entry .label{color:#22c55e}
+  .node.ai{border-color:#3b82f6; background:linear-gradient(180deg,#1e293b,#1d2f4a); box-shadow:0 0 0 1px rgba(59,130,246,0.14)}
+  .node.ai .label{color:#60a5fa}
+  .node.ai .name{color:#fff}
+  .node.terminal{border-color:#0891b2; background:linear-gradient(180deg,#1e293b,#0e2832)}
+  .node.terminal .label{color:#22d3ee}
+
+  .arrow{
+    color:#475569; font-size:22px; font-weight:300;
+    flex:0 0 auto; user-select:none;
+    line-height:1;
+  }
+  .arrow.down{transform:rotate(90deg);margin:6px 0}
+
+  /* ─ Bottom row: meta facts ─ */
+  .facts{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:14px;
+    margin-top:34px;
+  }
+  .fact{
+    padding:16px 18px;
+    background:rgba(30,41,59,0.55);
+    border:1px solid rgba(148,163,184,0.10);
+    border-left:2.5px solid #3b82f6;
+    border-radius:8px;
+  }
+  .fact .v{
+    font-size:24px; font-weight:700; color:#fff; line-height:1; letter-spacing:-0.020em;
+    font-family:'Outfit',sans-serif;
+  }
+  .fact .v small{font-size:14px;color:#94a3b8;font-weight:500;margin-left:3px}
+  .fact .l{
+    font-size:11px; color:#94a3b8; margin-top:6px; letter-spacing:0;
+    line-height:1.40;
+  }
+
+  /* ─ Phase ribbon ─ */
+  .phase{
+    margin-top:28px;
+    display:flex; gap:16px; align-items:stretch;
+    padding:14px 18px;
+    border:1px solid rgba(148,163,184,0.10);
+    border-radius:10px;
+    background:rgba(15,23,42,0.50);
+  }
+  .ph-tag{
+    font-size:10px; letter-spacing:0.16em; color:#64748b; text-transform:uppercase;
+    font-weight:600; align-self:center;
+  }
+  .ph-step{
+    flex:1;
+    padding:6px 10px;
+    border-radius:6px;
+    font-size:12px;
+  }
+  .ph-step.done{background:rgba(34,197,94,0.10); color:#86efac; border:1px solid rgba(34,197,94,0.25)}
+  .ph-step.now{background:rgba(59,130,246,0.14); color:#bfdbfe; border:1px solid #3b82f6}
+  .ph-step.next{background:transparent; color:#64748b; border:1px dashed rgba(148,163,184,0.20)}
+  .ph-step b{display:block;font-weight:600;color:inherit;margin-bottom:2px;font-size:12px}
+
+  .footer{
+    position:absolute; bottom:24px; left:56px; right:56px;
+    display:flex; justify-content:space-between;
+    font-size:10.5px; color:#475569; letter-spacing:0.04em;
+    border-top:1px solid rgba(148,163,184,0.08);
+    padding-top:14px;
+  }
+  .footer .right{font-family:'JetBrains Mono',monospace;color:#64748b}
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div class="head-l">
+    <div class="tag">PROD · CS / AI ARCHITECTURE</div>
+    <h1>cs-ai-dashboard</h1>
+    <div class="sub">Production CS operations dashboard · FastAPI + Vanilla JS SPA · Claude SDK Draft + Review</div>
+  </div>
+  <div class="head-r">
+    <div class="meta">2024.06 ~ Live</div>
+    <div class="url">cs-dashboard.duckdns.org</div>
+  </div>
+</div>
+
+<div class="pipeline">
+
+  <div class="col">
+    <div class="node entry">
+      <div class="label">Source</div>
+      <div class="name">Zendesk Inbox</div>
+      <div class="meta">Webhook · 10 markets</div>
+    </div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <div class="col">
+    <div class="node">
+      <div class="label">Ingest</div>
+      <div class="name">FastAPI Webhook</div>
+      <div class="meta">JWT · /v1/zd/inbound</div>
+    </div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <div class="col">
+    <div class="node">
+      <div class="label">Normalize</div>
+      <div class="name">Lang Normalizer</div>
+      <div class="meta">10 languages · spam P1~P12</div>
+    </div>
+    <div class="node">
+      <div class="label">Classify</div>
+      <div class="name">4-stage Category</div>
+      <div class="meta">Subscription · Refund · Content · IP</div>
+    </div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <div class="col">
+    <div class="node ai">
+      <div class="label">AI Layer</div>
+      <div class="name">Claude SDK + RAG</div>
+      <div class="meta">9-market multilingual RAG<br>240-case audit verified</div>
+    </div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <div class="col">
+    <div class="node">
+      <div class="label">Score</div>
+      <div class="name">6-dim Quality</div>
+      <div class="meta">Accuracy · Tone · Brevity ·<br>Empathy · Compliance · Locale</div>
+    </div>
+    <div class="node">
+      <div class="label">Review</div>
+      <div class="name">Agent UI · 95/5</div>
+      <div class="meta">Human approves draft</div>
+    </div>
+  </div>
+
+  <div class="arrow">→</div>
+
+  <div class="col">
+    <div class="node terminal">
+      <div class="label">Output</div>
+      <div class="name">Customer Reply</div>
+      <div class="meta">Invisible AI<br>Customer never knows</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="facts">
+  <div class="fact">
+    <div class="v">1,422<small> tests</small></div>
+    <div class="l">Phase 1 production · Draft + Review live</div>
+  </div>
+  <div class="fact">
+    <div class="v">9 / 10</div>
+    <div class="l">Markets covered · Languages supported</div>
+  </div>
+  <div class="fact">
+    <div class="v">85.3<small>%</small></div>
+    <div class="l">L3 self-service · 8mo · 12,464 tickets</div>
+  </div>
+  <div class="fact">
+    <div class="v">95<small>%↓</small></div>
+    <div class="l">Reporting cycle · 48h → 1h · 47h/wk recovered</div>
+  </div>
+</div>
+
+<div class="phase">
+  <div class="ph-tag">Phase</div>
+  <div class="ph-step done"><b>Phase 1 · Done</b>Draft + Review · 1,422 tests · live in production</div>
+  <div class="ph-step now"><b>Phase 2 · In Design</b>L3 Auto-Response · 23 trees · 30+ pages</div>
+  <div class="ph-step next"><b>Phase 3 · Roadmap</b>Closed-loop QA · End-to-end auto triage</div>
+</div>
+
+<div class="footer">
+  <span>cs-ai-dashboard · system architecture · 2026.05</span>
+  <span class="right">FastAPI · Vanilla JS · Claude SDK · RAG · JWT · Zendesk-native UX</span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>CS Automation · Phase Roadmap</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:#0f172a;
+    font-family:'Outfit','Inter','Noto Sans KR',-apple-system,sans-serif;
+    color:#e2e8f0;
+    padding:48px 56px;
+    width:1600px; height:900px;
+    overflow:hidden; position:relative;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:''; position:absolute; inset:0;
+    background:radial-gradient(ellipse 700px 350px at 50% -10%, rgba(59,130,246,0.10), transparent 60%);
+    pointer-events:none;
+  }
+
+  .head{margin-bottom:28px;position:relative;z-index:2}
+  .tag{font-size:11px;font-weight:600;letter-spacing:0.18em;color:#3b82f6;text-transform:uppercase;margin-bottom:8px}
+  h1{font-size:34px;font-weight:700;color:#fff;letter-spacing:-0.022em;line-height:1.10}
+  .sub{font-size:13px;color:#94a3b8;margin-top:6px;max-width:1100px;line-height:1.55}
+
+  /* Timeline */
+  .timeline{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:14px;
+    margin-top:14px; position:relative; z-index:2;
+  }
+  .stage{
+    padding:24px 22px 22px;
+    background:linear-gradient(180deg,#1e293b,#1a2335);
+    border:1px solid rgba(148,163,184,0.12);
+    border-radius:12px;
+    position:relative;
+    min-height:480px;
+    display:flex; flex-direction:column;
+  }
+  .stage.done{border-color:rgba(34,197,94,0.40); box-shadow:0 0 0 1px rgba(34,197,94,0.12)}
+  .stage.now{border-color:#3b82f6; box-shadow:0 0 0 1px rgba(59,130,246,0.18), 0 0 60px rgba(59,130,246,0.10)}
+  .stage.next{border-color:rgba(148,163,184,0.16); opacity:0.92}
+
+  .stage .top{
+    display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px;
+  }
+  .stage .num{
+    font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.16em;
+    color:#64748b; font-weight:600;
+  }
+  .stage.done .num{color:#22c55e}
+  .stage.now .num{color:#60a5fa}
+  .stage .badge{
+    font-size:9.5px; letter-spacing:0.14em; font-weight:600; padding:3px 8px;
+    border-radius:99px; text-transform:uppercase;
+  }
+  .stage.done .badge{background:rgba(34,197,94,0.15); color:#86efac; border:1px solid rgba(34,197,94,0.30)}
+  .stage.now .badge{background:rgba(59,130,246,0.18); color:#bfdbfe; border:1px solid #3b82f6}
+  .stage.next .badge{background:rgba(148,163,184,0.10); color:#94a3b8; border:1px solid rgba(148,163,184,0.20)}
+
+  .stage h2{
+    font-size:24px; font-weight:700; color:#fff; line-height:1.15; margin-bottom:6px;
+    letter-spacing:-0.018em;
+  }
+  .stage .h-en{
+    font-size:11.5px; color:#3b82f6; letter-spacing:0.04em; text-transform:uppercase;
+    font-weight:600; margin-bottom:14px;
+  }
+  .stage.done .h-en{color:#22c55e}
+  .stage .desc{
+    font-size:12.5px; color:#cbd5e1; line-height:1.55; margin-bottom:14px;
+  }
+
+  .deliverables{
+    margin-top:auto; padding-top:14px; border-top:1px dashed rgba(148,163,184,0.15);
+  }
+  .deliverables-tag{
+    font-size:9.5px; letter-spacing:0.16em; color:#64748b; text-transform:uppercase;
+    font-weight:600; margin-bottom:6px;
+  }
+  .deliverables ul{list-style:none}
+  .deliverables li{
+    display:flex; align-items:flex-start; gap:8px; font-size:11.5px; color:#cbd5e1;
+    margin-bottom:5px; line-height:1.50;
+  }
+  .deliverables li::before{
+    content:''; flex-shrink:0; width:14px; height:14px; border-radius:3px;
+    background:rgba(59,130,246,0.10); border:1px solid rgba(59,130,246,0.30); margin-top:2px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .stage.done .deliverables li::before{
+    content:'✓'; background:#22c55e; border:0; color:#0f172a; font-size:9px; font-weight:800;
+  }
+  .stage.now .deliverables li::before{
+    background:rgba(59,130,246,0.20); border-color:#3b82f6;
+  }
+  .stage.next .deliverables li::before{
+    background:transparent; border-color:rgba(148,163,184,0.20); border-style:dashed;
+  }
+
+  .metric-row{
+    display:flex; gap:14px; margin-top:14px;
+  }
+  .metric-row .m{
+    flex:1;
+    padding:8px 10px;
+    background:rgba(15,23,42,0.55);
+    border:1px solid rgba(148,163,184,0.10);
+    border-radius:6px;
+  }
+  .metric-row .m .v{font-size:16px; font-weight:700; color:#fff; line-height:1; letter-spacing:-0.012em}
+  .metric-row .m .v small{font-size:10px;color:#94a3b8;font-weight:500;margin-left:2px}
+  .metric-row .m .l{font-size:9.5px; color:#94a3b8; margin-top:3px}
+
+  .footer{
+    position:absolute; bottom:24px; left:56px; right:56px;
+    display:flex; justify-content:space-between; align-items:baseline;
+    font-size:10.5px; color:#475569; letter-spacing:0.04em;
+    border-top:1px solid rgba(148,163,184,0.08);
+    padding-top:14px;
+  }
+  .footer .right{font-family:'JetBrains Mono',monospace;color:#64748b}
+
+  /* Connector arrows between stages */
+  .arrow-overlay{
+    position:absolute; inset:0; pointer-events:none; z-index:1;
+  }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div class="tag">CS AUTOMATION · PHASE ROADMAP</div>
+  <h1>수동 → 반자동 → 자동</h1>
+  <div class="sub">투믹스글로벌 CS 운영의 단계적 자동화 로드맵 — 변화관리 리스크를 통제하면서 Phase별로 자동화 비율을 확장. 2024.06 입사 시 0% 자동화 → 현재 Phase 1 운영 중 → Phase 3 클로즈드 루프 자동 트리아지가 도착점.</div>
+</div>
+
+<div class="timeline">
+
+  <div class="stage done">
+    <div class="top">
+      <span class="num">PHASE 01</span>
+      <span class="badge">Done · Live</span>
+    </div>
+    <h2>Draft + Review</h2>
+    <div class="h-en">Manual · 수동 검증 + AI 초안</div>
+    <div class="desc">상담사가 처음부터 작성하지 않고 AI가 만든 초안을 검토 · 수정 · 승인. Invisible AI: 고객은 AI 존재를 인지하지 않음. 95/5 룰 — 95% 템플릿 일관성 + 5% Claude 유연성.</div>
+
+    <div class="deliverables">
+      <div class="deliverables-tag">Delivered</div>
+      <ul>
+        <li>cs-ai-dashboard 프로덕션 배포</li>
+        <li>Claude SDK + 9-마켓 다국어 RAG</li>
+        <li>240-case RAG 전면 검증 보고서</li>
+        <li>1,422 자동화 테스트 작성</li>
+      </ul>
+    </div>
+
+    <div class="metric-row">
+      <div class="m"><div class="v">1,422</div><div class="l">tests</div></div>
+      <div class="m"><div class="v">9 / 10</div><div class="l">markets / langs</div></div>
+    </div>
+  </div>
+
+  <div class="stage now">
+    <div class="top">
+      <span class="num">PHASE 02</span>
+      <span class="badge">In Design</span>
+    </div>
+    <h2>L3 Auto-Response</h2>
+    <div class="h-en">Semi-auto · 1차 응대 자동화</div>
+    <div class="desc">L3 (셀프서비스 가능) 카테고리에 대해 응답 트리 기반 자동 회신. L1 티켓이 L3 대비 2.3배 리소스를 소모하는 구조 → L3 자동화 = 인당 효율 직접 개선.</div>
+
+    <div class="deliverables">
+      <div class="deliverables-tag">In Progress</div>
+      <ul>
+        <li>L3 자동 응답 엔진 설계서 (30+ 페이지)</li>
+        <li>응답 트리 11 → 23개 확장</li>
+        <li>신규 7 카테고리 분류 정의</li>
+        <li>품질 6차원 스코어링 게이트</li>
+      </ul>
+    </div>
+
+    <div class="metric-row">
+      <div class="m"><div class="v">23</div><div class="l">response trees</div></div>
+      <div class="m"><div class="v">85.3<small>%</small></div><div class="l">L3 share</div></div>
+    </div>
+  </div>
+
+  <div class="stage next">
+    <div class="top">
+      <span class="num">PHASE 03</span>
+      <span class="badge">Roadmap</span>
+    </div>
+    <h2>Closed-Loop Auto Triage</h2>
+    <div class="h-en">Full Auto · 종단간 자동화</div>
+    <div class="desc">L1 / L2 / L3 자동 분기 + 자동 발송 + QA 폐쇄 루프. 사람은 critical only. 자동 응답 결과의 품질·재유입률을 4주 단위로 측정하고 룰을 자가 갱신.</div>
+
+    <div class="deliverables">
+      <div class="deliverables-tag">Roadmap</div>
+      <ul>
+        <li>End-to-end Auto Triage 파이프라인</li>
+        <li>QA 결과 → 룰 자가 갱신 루프</li>
+        <li>Critical-only 휴먼 인터벤션</li>
+        <li>VOC → Service Change 자동 RFC</li>
+      </ul>
+    </div>
+
+    <div class="metric-row">
+      <div class="m"><div class="v">Target</div><div class="l">~88% L3 auto</div></div>
+      <div class="m"><div class="v">4-week</div><div class="l">QA loop</div></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <span>cs-automation · Phase Roadmap · Toomics Global · 2026.05</span>
+  <span class="right">Phase 1 Live · Phase 2 In Design · Phase 3 Roadmap</span>
+</div>
+
+</body>
+</html>

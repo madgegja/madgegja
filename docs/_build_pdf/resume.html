@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chongsun Yu — Resume</title>
+<style>
+:root{
+  --near-black:#141413;
+  --terracotta:#c96442;
+  --coral:#d97757;
+  --parchment:#f5f4ed;
+  --ivory:#faf9f5;
+  --sand:#e8e6dc;
+  --charcoal:#4d4c48;
+  --olive:#5e5d59;
+  --stone:#87867f;
+  --dark-warm:#3d3d3a;
+  --border-cream:#f0eee6;
+  --border-warm:#e8e6dc;
+  --ring-warm:#d1cfc5;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:'Source Serif 4','Source Serif Pro','Iowan Old Style','Palatino','Georgia',serif;
+  background:var(--parchment);
+  color:var(--near-black);
+  font-size:10.5pt;
+  line-height:1.42;
+  -webkit-font-smoothing:antialiased;
+  letter-spacing:-0.005em;
+}
+
+.page{
+  max-width:780px;
+  margin:0 auto;
+  padding:18mm 16mm 14mm;
+  background:var(--parchment);
+}
+
+/* HEADER */
+h1{
+  font-family:'Source Serif 4','Iowan Old Style','Palatino',serif;
+  font-weight:600;
+  font-size:24pt;
+  line-height:1.10;
+  margin:0 0 4pt;
+  letter-spacing:-0.012em;
+  color:var(--near-black);
+}
+
+/* contact line (first <p> right after h1) */
+h1 + p{
+  font-family:'Inter','SF Pro Text','Helvetica Neue',sans-serif;
+  font-size:9pt;
+  color:var(--olive);
+  margin:0 0 6pt;
+  letter-spacing:0;
+}
+
+/* target-role blockquote */
+blockquote{
+  margin:0 0 14pt;
+  padding:7pt 12pt;
+  border-left:2pt solid var(--terracotta);
+  background:var(--ivory);
+  font-family:'Inter','SF Pro Text',sans-serif;
+  font-size:9pt;
+  color:var(--charcoal);
+  border-radius:2pt;
+}
+blockquote p{margin:0}
+blockquote strong{color:var(--terracotta);font-weight:600}
+
+/* RULES become subtle */
+hr{
+  border:0;
+  height:1px;
+  background:var(--border-warm);
+  margin:13pt 0 12pt;
+}
+
+/* SECTIONS */
+h2{
+  font-family:'Source Serif 4','Iowan Old Style',serif;
+  font-weight:600;
+  font-size:13pt;
+  line-height:1.20;
+  margin:14pt 0 6pt;
+  color:var(--near-black);
+  letter-spacing:-0.005em;
+  text-transform:uppercase;
+  font-variant:small-caps;
+  letter-spacing:0.06em;
+}
+
+h3{
+  font-family:'Source Serif 4','Iowan Old Style',serif;
+  font-weight:600;
+  font-size:11.5pt;
+  line-height:1.25;
+  margin:9pt 0 1pt;
+  color:var(--near-black);
+}
+
+h3 + p strong{
+  font-weight:600;
+  color:var(--terracotta);
+}
+h3 + p{
+  font-family:'Inter','SF Pro Text',sans-serif;
+  font-size:9.2pt;
+  color:var(--charcoal);
+  margin:0 0 4pt;
+}
+
+/* PROFILE / paragraphs */
+p{
+  margin:0 0 6pt;
+  text-align:left;
+}
+
+/* LISTS */
+ul{
+  margin:2pt 0 6pt;
+  padding-left:14pt;
+}
+ul li{
+  margin-bottom:3pt;
+  line-height:1.40;
+}
+ul li::marker{
+  color:var(--terracotta);
+}
+
+strong{
+  font-weight:600;
+  color:var(--near-black);
+}
+
+/* category badges like [Active Payment BD] */
+ul li strong:first-child{
+  display:inline;
+  font-family:'Inter','SF Pro Text',sans-serif;
+  font-size:8.7pt;
+  letter-spacing:0.02em;
+  color:var(--terracotta);
+  font-weight:600;
+}
+
+/* TABLE (Skills) */
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin:4pt 0 8pt;
+  font-size:9.6pt;
+}
+th, td{
+  text-align:left;
+  padding:5pt 8pt;
+  vertical-align:top;
+  border-bottom:1px solid var(--border-cream);
+}
+th{
+  font-family:'Inter','SF Pro Text',sans-serif;
+  font-weight:600;
+  font-size:8.8pt;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  color:var(--stone);
+  background:var(--ivory);
+  width:24%;
+}
+td:first-child{
+  font-weight:600;
+  color:var(--near-black);
+  width:24%;
+}
+
+/* PRINT */
+@page{
+  size:A4;
+  margin:0;
+}
+@media print{
+  html,body{background:var(--parchment);}
+  .page{margin:0;padding:14mm 14mm 12mm;max-width:none}
+  h2{page-break-after:avoid}
+  h3{page-break-after:avoid}
+  ul,table{page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<h1>CHONGSUN YU</h1>
+<p>+82-10-4167-0856 | <a href="mailto:madgegja@gmail.com">madgegja@gmail.com</a> | csy-p.com | github.com/madgegja | linkedin.com/in/chongsun-yu-67aa84138</p>
+<blockquote>
+<p><strong>Target Role:</strong> Business Development Representative, Anthropic — Seoul</p>
+</blockquote>
+<hr>
+<h2>PROFILE</h2>
+<p>Business Development professional with 12+ years driving global payment and platform partnerships, now combining that operator background with hands-on AI/LLM building. At NHN KCP&#39;s International Business team, I owned end-to-end deal cycles — prospecting through contracting and renewals — with 10+ global partners including Visa Cybersource, Tencent, JP Morgan, and WorldPay, giving me deep fluency in <strong>consumption-based, transaction-priced B2B models</strong>. I have a documented 0→1 outbound BD case where I built a cross-border USD remittance service from scratch and generated <strong>KRW 200M+ in monthly recurring revenue</strong>.</p>
+<p>Currently leading BizOps at Toomics Global, I personally drive BD and contract negotiations with global payment partners (<strong>PayPal, Checkout.com, WorldPay, Airwallex</strong>) and IP-protection partners (<strong>Markvision</strong> and others), while simultaneously designing and shipping a <strong>Claude API-based AI Agent pipeline</strong> that automated our reporting from 48h → 1h (95% reduction) and cut FRT/RT by 50%+. I use SQL and Python daily to turn operational and partner data into sales-relevant insights, and 4.5 years stationed in Bangkok at a tri-national joint venture sharpened my cross-cultural execution. I&#39;m bilingual at business-native level in <strong>Korean and English</strong>, and I deeply care about Anthropic&#39;s mission of building safe, reliable AI.</p>
+<hr>
+<h2>KEY HIGHLIGHTS (BDR-fit)</h2>
+<ul>
+<li><strong>Outbound BD 0→1</strong>: Conceived and launched a cross-border USD remittance service generating <strong>KRW 200M+ monthly recurring revenue</strong> (NHN KCP)</li>
+<li><strong>Active Global BD (Current)</strong>: Personally leading BD with PayPal, Checkout.com, WorldPay, Airwallex, and Markvision at Toomics Global today</li>
+<li><strong>Strategic Account Ownership</strong>: Managed full deal cycle for <strong>10+ global partners</strong> — Visa Cybersource, Tencent, JP Morgan, WorldPay</li>
+<li><strong>Native fluency in consumption-based API economics</strong>: 12 years operating PG / payment infrastructure — the closest analogue to Anthropic&#39;s per-token pricing model</li>
+<li><strong>Hands-on AI/LLM builder</strong>: Built production AI Agent on Claude API (95% reporting-time reduction)</li>
+<li><strong>Data → Insight</strong>: Analyzed 1,500+ multilingual tickets/month to drive <strong>52% FRT</strong> and <strong>57% RT</strong> reductions</li>
+<li><strong>Fluent Bilingual</strong>: English (Bachelor&#39;s at ANU Australia + 4.5 years Bangkok) · Korean (Native)</li>
+</ul>
+<hr>
+<h2>EXPERIENCE</h2>
+<h3>Toomics Global</h3>
+<p><strong>Team Lead, BizOps (Global Platform Operations)</strong> | Jun 2024 ~ Present</p>
+<p>Own payments, CX, and IP across 10 international markets while managing a team of 4. Personally lead BD with global payment and IP partners and use data + AI to compress decision-cycle time.</p>
+<ul>
+<li><strong>[Active Payment BD]</strong> Personally prospect, meet, and negotiate with global PSPs — <strong>PayPal, Checkout.com, WorldPay, Airwallex</strong> — leading new and renewal contracts. Drive market-by-market coverage expansion and fee-structure optimization in parallel; consolidated chargeback dispute and refund flows across three PSPs into one automated workflow.</li>
+<li><strong>[IP / Anti-Piracy Partnership]</strong> Lead BD and contracting with <strong>Markvision</strong> and other global IP-protection vendors. Built a DMCA / UDRP-based piracy monitoring and takedown framework, establishing a partner ecosystem that pre-empts brand and revenue risk.</li>
+<li><strong>[Data-driven Insights]</strong> Designed and built a Claude API-based AI Agent pipeline end-to-end, automating raw Zendesk data → weekly KPI reports. Cut reporting cycle time <strong>48h → 1h (95%↓)</strong> and embedded a data-driven operating cadence.</li>
+<li><strong>[Lead / Ticket Triage at Scale]</strong> Restructured 1,500+ monthly multilingual (10-language) inbound tickets into 17 categories and 80+ response templates with prioritized queues; drove <strong>FRT down 52%</strong> and <strong>RT down 57%</strong> through repeating-pattern analysis.</li>
+<li><strong>[Process Refinement]</strong> Established Confluence-based ops playbooks and a GitHub-versioned automation governance, scaling AI automation in phases (manual → semi-auto → full-auto) to control change-management risk.</li>
+</ul>
+<hr>
+<h3>NX3 Games</h3>
+<p><strong>Lead, Blockchain Business</strong> | Jan 2022 ~ Nov 2023</p>
+<p>Owned the new blockchain-game business end-to-end — product strategy, partnerships, payment integrations, and fundraising — in a fast-moving startup environment.</p>
+<ul>
+<li><strong>[Strategic Outbound · Investor Relations]</strong> Led the Seed round, ran outbound meetings and pitches to VCs and strategic partners, <strong>closing 100% of the allocated round</strong>. Delivered numerous English-language presentations to C-level and investor audiences.</li>
+<li><strong>[Cross-functional Pipeline Build]</strong> Sourced, contracted, and integrated multi-channel payment partners — Xsolla (PC in-app) and Binance Pay (web blockchain) — aligning engineering, business, and operations stakeholders to launch on schedule.</li>
+<li><strong>[Product GTM]</strong> Designed NFT, token, and P2E mechanics for the MMORPG &quot;Rohan M&quot; and shipped the global blockchain version in Jan 2023.</li>
+</ul>
+<hr>
+<h3>NHN KCP</h3>
+<p><strong>Lead, International Business Team</strong> | Nov 2019 ~ Dec 2021</p>
+<p>Owned global payment-partner ecosystem sales, contracts, and operations. Ran the full <strong>consumption-based, transaction-priced B2B</strong> lifecycle: prospecting → qualification → closing → expansion.</p>
+<ul>
+<li><strong>[New Business Development 0→1]</strong> Conceived and launched a USD virtual-account-based cross-border bulk remittance service, generating <strong>KRW 200M+ in monthly recurring revenue</strong>. Owned the full E2E: problem definition (offshore-settlement inefficiency) → market discovery → partner negotiation (Payoneer, Uber, Airbnb) → launch → KPI measurement.</li>
+<li><strong>[Strategic Account Sales · Expansion]</strong> Owned account ownership across <strong>10+ global payment partners</strong> — Visa Cybersource, Tencent, JP Morgan, WorldPay — running deal negotiation, fee renegotiation, and cross-sell. Improved partner experience and revenue efficiency together.</li>
+<li><strong>[Outbound Partnership]</strong> Drove a strategic partnership with Tencent to launch offline WeChat QR payment in the Korean market.</li>
+</ul>
+<hr>
+<h3>Treepay Co., Ltd (JV: NHN KCP × CAT Telecom × SK Telecom)</h3>
+<p><strong>IT Director / Team Lead</strong> | Jun 2015 ~ Nov 2019 | Bangkok, Thailand</p>
+<p>Founding-team member at the tri-national JV, stationed in Bangkok for 4.5 years. Combined 0→1 payment-infrastructure build with cross-cultural BD/Ops.</p>
+<ul>
+<li><strong>[Cross-cultural BD]</strong> Designed Thailand-specific payment business models (cards/installments, e-Wallet, Counter Payment) and ran sales/partnership execution with local financial institutions, security vendors, and law firms. Three-country (Korea, Thailand, Australia) stakeholder communication in English.</li>
+<li><strong>[Regulatory &amp; Licensing]</strong> Led acquisition of payment licenses (C3 / C5), PCI-DSS, and BOT regulatory approvals — running the end-to-end business setup under local regulation.</li>
+<li><strong>[Process Innovation]</strong> Re-architected Korea&#39;s three-party payment model to fit Thailand&#39;s four-party local standard and ran the in-housing consulting through to operational handover.</li>
+</ul>
+<hr>
+<h3>NHN KCP</h3>
+<p><strong>Account Manager, International Business Team</strong> | Oct 2014 ~ Jun 2015</p>
+<ul>
+<li><strong>[Account Management]</strong> Owned account management for Visa-subsidiary Cybersource and downstream merchants — global OTAs, fashion brands, and digital platforms — as primary point of contact.</li>
+<li><strong>[Data-driven Optimization]</strong> Onboarded Cybersource FDS into NHN KCP&#39;s overseas-card processing and continuously tuned detection rules with data, scaling monthly successful overseas-card transactions from <strong>~10K → ~80K (8×)</strong>.</li>
+</ul>
+<hr>
+<h2>EDUCATION</h2>
+<p><strong>Australian National University</strong> | Canberra, Australia
+Bachelor of Commerce, Major in Finance | 2007 ~ 2012</p>
+<hr>
+<h2>SKILLS &amp; QUALIFICATIONS</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Languages</strong></td>
+<td>English (Business Native — ANU 5y + Bangkok 4.5y), Korean (Native)</td>
+</tr>
+<tr>
+<td><strong>Sales / CRM-adjacent Tools</strong></td>
+<td>Zendesk, Jira, Confluence, Notion, Slack, Google Workspace, GitHub</td>
+</tr>
+<tr>
+<td><strong>Data / Automation</strong></td>
+<td>SQL, Python (pandas, API integration), Excel — for sales/ops decision support</td>
+</tr>
+<tr>
+<td><strong>AI / LLM (Builder Level)</strong></td>
+<td>Claude API, Prompt Engineering, AI Agent pipeline design, RAG fundamentals</td>
+</tr>
+<tr>
+<td><strong>Domain</strong></td>
+<td>Consumption-based B2B (PG / Payments), Cross-border Payment, Partnership &amp; Contract Negotiation, 0→1 GTM, Data-driven Operating Governance</td>
+</tr>
+<tr>
+<td><strong>Military</strong></td>
+<td>Republic of Korea Army, Sergeant, honorable discharge (Oct 2012 ~ Jul 2014)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>WHY ANTHROPIC</h2>
+<ul>
+<li><strong>Mission alignment</strong>: A career running global payment infrastructure trains you to think in terms of trust, risk, and compliance every day. Anthropic&#39;s commitment to safe, interpretable AI maps directly onto those values.</li>
+<li><strong>Builder-operator perspective</strong>: I&#39;ve shipped production automation on the Claude API myself, so I can speak the language of evaluating-stage startup and enterprise prospects and accelerate their journey from curiosity to deployment.</li>
+<li><strong>APAC GTM fit</strong>: 0→1 BD and operations across Korea, Thailand, and Australia gives me coverage of both fast pipeline-build motions and complex enterprise account dynamics in this market.</li>
+</ul>
+
+</div>
+</body>
+</html>
