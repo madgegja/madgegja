@@ -23,10 +23,98 @@
 - Building **AI Agent systems** to automate BizOps analysis & reporting
 - Building **CS AI Dashboard** — real-time ticket management with AI Draft engine
 - Building **CS data analysis automation pipelines** with Python
+- Maintaining **agent-harness / Codex workflow** projects across LazyCodex and OMO
 - Analyzing operational data across **10 global markets** (EN/FR/ES/PT/DE/TH/JP/CN/IT/KR)
 - Interested in **AI-powered operations**, **data-driven process improvement**, and **operational efficiency**
 
 > **최근 운영 성과 (2024.06 ~ )** — FRT **52%↓** · RT **57%↓** · 주간 리포팅 **48h → 1h (95%↓)** · 월 **1,500+건** 다국어 CS 분석 · **61개** 운영 산출물 단독 기획
+
+---
+
+### Latest GitHub Focus — 2026-06
+
+최근 GitHub 작업은 운영 자동화에서 한 단계 더 내려가, **에이전트 실행 환경 · MCP/플러그인 · 개인 워크스페이스 자동화**를 고도화하는 흐름으로 정리됩니다.
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/lazycodex">
+        <img src="https://img.shields.io/badge/Public-lazycodex-111827?style=for-the-badge&logo=openai&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/TypeScript-Agent_Harness-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+      <br><br>
+      <b>LazyCodex</b>
+      <br><br>
+      Codex 안에서 프로젝트 메모리, 계획, 실행, 검수 루프를 연결하는 에이전트 하네스<br>
+      복잡한 코드베이스에서 PR 정리 · 디버깅 · 리뷰 자동화를 안정적으로 굴리는 방향으로 개선 중
+    </td>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/oh-my-openagent">
+        <img src="https://img.shields.io/badge/Public-oh--my--openagent-2563EB?style=for-the-badge&logo=typescript&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/TypeScript-OMO_Plugin_Runtime-2563EB?style=flat-square&logo=typescript&logoColor=white" />
+      <br><br>
+      <b>Oh My OpenAgent</b>
+      <br><br>
+      Codex/OpenCode용 에이전트 워크플로우 런타임<br>
+      스킬 · MCP · 훅 · 팀 모드 · 검수 루프를 묶어 실사용 개발 표면으로 다듬는 중
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/qt-writer">
+        <img src="https://img.shields.io/badge/Private-qt--writer-0F766E?style=for-the-badge&logo=html5&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/HTML-Persona_Workspace-0F766E?style=flat-square&logo=html5&logoColor=white" />
+      <br><br>
+      <b>qt-writer</b>
+      <br><br>
+      로그인 ID별 페르소나와 세션을 분리하는 개인 글쓰기 워크스페이스<br>
+      계정별 페르소나, 캐시/로그아웃 흐름, 세션 상태 관리를 고도화하는 중
+    </td>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/ip-shield">
+        <img src="https://img.shields.io/badge/Private-ip--shield-DC2626?style=for-the-badge&logo=python&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/Python-IP_Protection-DC2626?style=flat-square&logo=python&logoColor=white" />
+      <br><br>
+      <b>ip-shield</b>
+      <br><br>
+      IP 보호와 침해 모니터링을 위한 스캐너 워크스페이스<br>
+      운영 리스크 탐지, 증거 정리, 자동 리포팅으로 이어지는 내부 도구 실험
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/memex">
+        <img src="https://img.shields.io/badge/Private-memex-7C3AED?style=for-the-badge&logo=python&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/Python-Knowledge_Memory-7C3AED?style=flat-square&logo=python&logoColor=white" />
+      <br><br>
+      <b>memex / notes / journal-agent</b>
+      <br><br>
+      개인 지식, 노트, 저널을 에이전트가 다시 쓸 수 있는 형태로 구조화하는 실험<br>
+      로컬-first 데이터, 검색, 회고 자동화 중심의 개인 운영 레이어
+    </td>
+    <td align="center" width="50%">
+      <a href="https://github.com/madgegja/jinzoo">
+        <img src="https://img.shields.io/badge/Private-jinzoo-DB2777?style=for-the-badge&logo=javascript&logoColor=white" />
+      </a>
+      <br>
+      <img src="https://img.shields.io/badge/JavaScript-Persona_Project-DB2777?style=flat-square&logo=javascript&logoColor=white" />
+      <br><br>
+      <b>jinzoo</b>
+      <br><br>
+      jinzoo 페르소나 기반 개인 프로젝트 워크스페이스<br>
+      개인 페르소나별 대화와 기록 흐름을 분리 관리하는 방향으로 정리 중
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -449,6 +537,8 @@ Zendesk Raw JSON (12,920건)
 
 <p>
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
   <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
   <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white" />
   <img src="https://img.shields.io/badge/Claude_AI-D4A574?style=for-the-badge&logo=anthropic&logoColor=white" />
@@ -470,5 +560,5 @@ Zendesk Raw JSON (12,920건)
 </p>
 
 <p align="center">
-  <sub>Last updated: 2026-05-18 (KST)</sub>
+  <sub>Last updated: 2026-06-07 (KST)</sub>
 </p>
