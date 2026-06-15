@@ -560,5 +560,5 @@ Zendesk Raw JSON (12,920건)
 </p>
 
 <p align="center">
-  <sub>Last updated: 2026-06-07 (KST)</sub>
+  <sub>Last updated: 2026-06-15 (KST)</sub>
 </p>
