@@ -410,34 +410,6 @@ Zendesk Raw JSON (12,920건)
 
 <table>
   <tr>
-    <td align="center" colspan="2">
-      <a href="https://github.com/madgegja/toomics-chat-poc">
-        <img src="https://img.shields.io/badge/💬_Featured-LLM_Character_Chat_Engine_PoC-DC2626?style=for-the-badge&logo=fastapi&logoColor=white" />
-      </a>
-      <br>
-      <img src="https://img.shields.io/badge/🔒_Private_Repository-gray?style=flat-square" />
-      <img src="https://img.shields.io/badge/v1.0-SHIPPED_2026--05--17-22C55E?style=flat-square" />
-      <br><br>
-      <b>LLM 캐릭터챗 엔진 PoC</b>
-      <br><br>
-      FastAPI + SSE 스트리밍 · TRPG state machine (chapter 0~5 + flags + inventory)<br>
-      호감도 5단계 · 감정 5축 · SQLite vault · Replicate WAI 이미지 생성 (3-5s/장)<br>
-      Opus/Grok 듀얼 모델 라우팅 · 25 commits · v1.0 출시 (2026-05-17 KST)
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
-      <a href="https://github.com/madgegja/nabi">
-        <img src="https://img.shields.io/badge/🦋_Project-nabi-9333EA?style=for-the-badge&logo=tauri&logoColor=white" />
-      </a>
-      <br>
-      <img src="https://img.shields.io/badge/🔒_Private_Repository-gray?style=flat-square" />
-      <br><br>
-      <b>nabi — 데스크탑 2D 캐릭터 비서</b>
-      <br><br>
-      Tauri + Live2D + Wan 2.2 i2v 모션 루프<br>
-      5-tier 베리에이션 (idle/blink/talking/emotion/cross-fade) · SFW 캐쥬얼 여친 비서 톤
-    </td>
     <td align="center" width="50%">
       <a href="https://github.com/madgegja/omd-lab">
         <img src="https://img.shields.io/badge/🎨_Project-omd--lab-EC4899?style=for-the-badge&logo=radixui&logoColor=white" />
